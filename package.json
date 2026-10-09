@@ -1,0 +1,7 @@
+{
+  "name": "mommis-evidence-explorer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {"test": "node --test tests/model.test.mjs", "build:rdf": "node scripts/export-rdf.mjs", "build:standalone":"node scripts/build-standalone.mjs"}
+}
