@@ -1,0 +1,18 @@
+PREFIX pilot: <https://example.org/mommis/pilot/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Context for studies mentioning 2′-FL, including mixture membership.
+# This does not infer that 2′-FL caused every listed endpoint.
+SELECT ?record ?statement ?system ?exposure ?comparator ?endpoint ?source
+WHERE {
+  ?record a pilot:StudyAssertion ;
+    pilot:mentionsGlycan pilot:2fl ;
+    dct:description ?statement ;
+    pilot:system ?system ;
+    pilot:exposure ?exposure ;
+    pilot:comparator ?comparator ;
+    pilot:endpoint ?endpoint ;
+    prov:wasDerivedFrom ?source .
+}
+ORDER BY ?record
