@@ -1,3 +1,5 @@
+> **For the combined version incorporating the older MOMMIS models, open `mommis-aligned.owl` or `mommis-aligned.ttl`. See [Alignment review](ALIGNMENT_REVIEW.md). This page documents the earlier four-class pattern.**
+
 # MOMMIS milk core — proposed pattern for review
 
 Open `mommis-milk-core.owl` in Protégé using File → Open. The file uses OWL in RDF/XML syntax. Select the Classes tab, then the local milk component classes; inspect **Equivalent To** and **SubClass Of**. No network imports are needed to inspect this draft.

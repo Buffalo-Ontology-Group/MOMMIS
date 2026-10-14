@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:mommis="http://purl.obolibrary.org/obo/mommis#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N1c7e2e32f92846a58956add7b85aac0d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001913"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000479">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>tissue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#InnateImmuneResponse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>innate immune response</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0045087"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#InnateImmuneResponse"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Connects to Health Types Ontology</mommis:legacyDefinition>
+    <mommis:legacyDefinition>The body's first line of defense, providing a rapid but generalized response to pathogens</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>human milk oligosaccharides</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50699"/>
+    <rdfs:comment>An oligosaccharide category associated with human milk. Occurrence-based versus structural membership, including synthetic material, remains to be defined.</rdfs:comment>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#HumanMilkOligosaccharides"/>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Complex carbohydrates found in human milk that influence the gut microbiota and immune system.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Human milk oligosaccharides (HMOs) are a significant component of human milk and act as prebiotics, immune modulators, and pathogen inhibitors.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Should this specify 3-10 monosaccharides?</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Complex sugars found in human milk that are not digestible by infants but support beneficial gut microbiota and immune development</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#affects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>affects</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#affects"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#affects"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#GutAssociatedLymphoidTissue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>gut associated lymphoid tissue</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000479"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#GutAssociatedLymphoidTissue"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Abbreviation: GALT</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Lymphoid tissue located in the gut (e.g., Peyer’s patches), essential for initiating immune responses to intestinal antigens</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#MilkGlycoprotein">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17089"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent"/>
+    <rdfs:comment>A glycoprotein that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="N317211988c6946c69ec3a9fe738486c5"/>
+    <rdfs:label>milk glycoprotein</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <mommis:legacyIRI rdf:resource="https://example.org/mommis/draft/milk-core/MilkGlycoprotein"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N491ebc6ef8284e1d8ce9951e4c9146ec">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <rdfs:comment>A chemical entity that is part of some milk. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:label>milk chemical component</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ne03862ff11ad43369e9a3377a2b1da50"/>
+    <mommis:legacyIRI rdf:resource="https://example.org/mommis/draft/milk-core/MilkChemicalComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#BioactivePeptide">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>bioactive peptide</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16670"/>
+    <rdfs:comment>A peptide considered for its biological activity; the criterion and role/disposition pattern remain to be specified.</rdfs:comment>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#BioactivePeptide"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#BioactivePeptide"/>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>A peptide that has a biological effect on a living organism, tissue, or cell.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Bioactive peptides are inactive within the sequence of the parent protein and can be released during digestion or processing.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Short peptide sequences derived from proteins that exert a biological effect, often modulating immune or gut functions</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/references">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#IntestinalEpithelialCells">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>intestinal epithelial cells</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#IntestinalEpithelialCells"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Cells lining the intestine that form a barrier and participate in nutrient absorption and immune signaling</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6757bc9c49c34de7ba84f777e02ef178">
+    <owl:intersectionOf rdf:nodeID="N0912b2c2d7594d3cadd95b1e7d9667fd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50699">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>oligosaccharide</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>biological process</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#AdaptiveImmuneResponse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>adaptive immune response</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0002250"/>
+    <mommis:legacyIRI rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AdaptiveImmuneResponse"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Connects to Health Types Ontology</mommis:legacyDefinition>
+    <mommis:legacyDefinition>A specialized response where the immune system learns to recognize and remember specific pathogens for faster responses upon re-exposure</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#Phagocytosis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>phagocytosis</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0006909"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#Phagocytosis"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The process by which certain immune cells (e.g., macrophages) engulf and digest pathogens and debris</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#regulates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>regulates</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#regulates"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N317211988c6946c69ec3a9fe738486c5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nfaf9dc9ce5fc4177b6244313d1d96129"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#CytokineProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>cytokine production</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0001816"/>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#CytokineProduction"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#CytokineProduction"/>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The biological process that results in the production of cytokines.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Cytokines are signaling molecules that mediate and regulate immunity, inflammation, and hematopoiesis.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>The process by which immune or epithelial cells synthesize and release cytokines, signaling molecules involved in immune regulation</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#has_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has part</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#has_part"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#MilkFatGlobuleMembrane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>milk fat globule membrane</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <rdfs:comment>The membrane structure surrounding a milk fat globule. More specific upstream mapping remains to be reviewed.</rdfs:comment>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#MilkFatGlobuleMembrane"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>A triple-layer membrane structure that surrounds fat globules in milk, containing bioactive proteins and lipids</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0000000">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>cell</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#MilkAssociated2FL">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_147155"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkCarbohydrate"/>
+    <rdfs:comment>A 2'-fucosyllactose entity that is a milk carbohydrate. This contextual class is distinct from generic 2'-fucosyllactose, including synthesized material. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="N6757bc9c49c34de7ba84f777e02ef178"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>milk-associated 2'-fucosyllactose</rdfs:label>
+    <mommis:legacyIRI rdf:resource="https://example.org/mommis/draft/milk-core/MilkAssociated2FL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>MOMMIS aligned review draft</rdfs:label>
+    <owl:versionInfo>0.2.0-review-2026-10-14</owl:versionInfo>
+    <dct:creator>Emily Steliotes</dct:creator>
+    <dct:references rdf:resource="https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/2"/>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <rdfs:comment>Review derivative of two user-supplied MOMMIS drafts and the milk-core pattern. Existing MOMMIS namespace reused for continuity, not a claim of registered identifiers. External IRIs are declarations; no full import closure. Review annotations are not accepted biological assertions.</rdfs:comment>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <dct:source>mommis-milk-core.owl</dct:source>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8dddba475f8741f59514ce7c381566bc">
+    <rdf:rest rdf:nodeID="Nb9c713ce88874a7ab3ee878cab07bb32"/>
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16646">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>carbohydrate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#enables">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>enables</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#enables"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#TCellActivation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>t cell activation</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0042110"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#TCellActivation"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The process of T cell engagement and stimulation through antigen recognition, leading to proliferation and immune activity</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0001913">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>milk</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#GutMicrobiotaBalance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>gut microbiota balance</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:comment>Upper category intentionally unresolved; no function/disposition axiom retained.</rdfs:comment>
+    <rdfs:comment>A proposed descriptor of gut microbial community composition or function. Operational definition and upper category unresolved.</rdfs:comment>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#GutMicrobiotaBalance"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>Connects to Health Types Ontology AND to Fucosylated HMO Ontology</mommis:legacyDefinition>
+    <mommis:legacyDefinition>A condition representing the compositional and functional equilibrium of microbial populations in the gastrointestinal tract</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#ImmuneHealth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>immune health</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:comment>Upper category intentionally unresolved; no function/disposition axiom retained.</rdfs:comment>
+    <rdfs:comment>A proposed immune-health concept. Quality, disposition, and outcome interpretations remain unresolved.</rdfs:comment>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/HEALTH_ImmuneHealth"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#ImmuneHealth"/>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The state of having a properly functioning immune system.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Immune health refers to the balanced state of immune function that provides protection against pathogens while maintaining tolerance to self and harmless environmental antigens.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>Connects to Health Types Ontology</mommis:legacyDefinition>
+    <mommis:legacyDefinition>The body's ability to defend against pathogens and maintain tolerance to self-antigens</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ned345128f22047da9b5bd5fbdea1aa8a">
+    <rdf:rest rdf:nodeID="N491ebc6ef8284e1d8ce9951e4c9146ec"/>
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16646"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne03862ff11ad43369e9a3377a2b1da50">
+    <owl:intersectionOf rdf:nodeID="N8dddba475f8741f59514ce7c381566bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#positivelyRegulates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>positively regulates</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#positivelyRegulates"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#induces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>induces</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#induces"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#BCellActivation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>b cell activation</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:candidateMapping rdf:resource="http://purl.obolibrary.org/obo/GO_0042113"/>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#BCellActivation"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#BCellActivation"/>
+    <dct:source>legacy/mommis-2025.ttl</dct:source>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The process in which B cells are activated, leading to antibody production.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>The activation of B cells is a key step in the adaptive immune response, leading to antibody production and immunological memory.</mommis:legacyDefinition>
+    <mommis:legacyDefinition>A biological process where B cells become activated upon recognizing specific antigens, initiating antibody production</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9c713ce88874a7ab3ee878cab07bb32">
+    <rdf:first rdf:nodeID="N1c7e2e32f92846a58956add7b85aac0d"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+    <rdfs:label>chemical entity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#MilkCarbohydrate">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16646"/>
+    <owl:equivalentClass rdf:nodeID="N99e35cf75b0c4c949ee92d5a053bcfff"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A carbohydrate that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:label>milk carbohydrate</rdfs:label>
+    <mommis:legacyIRI rdf:resource="https://example.org/mommis/draft/milk-core/MilkCarbohydrate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>immunoglobulin a production</rdfs:label>
+    <mommis:reviewStatus>Proposed alignment; Alex Diehl review pending</mommis:reviewStatus>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#ImmunoglobulinAProduction"/>
+    <dct:source>legacy/mommis-high-level.rdf</dct:source>
+    <mommis:legacyDefinition>The biosynthesis of IgA antibodies, primarily occurring in mucosal tissues and important for immune defense in the gut</mommis:legacyDefinition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#reviewStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16670">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>peptide</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_147155">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>2'-fucosyllactose</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>part of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7b2409e3b9784d8da6ad8b234c1761f3">
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0912b2c2d7594d3cadd95b1e7d9667fd">
+    <rdf:rest rdf:nodeID="N76f4942fadda4b02bd87557de8411a53"/>
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/CHEBI_147155"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N76f4942fadda4b02bd87557de8411a53">
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/mommis#MilkCarbohydrate"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#participates_in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>participates in</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://purl.obolibrary.org/obo/mommis#participates_in"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#candidateMapping">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>material entity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N99e35cf75b0c4c949ee92d5a053bcfff">
+    <owl:intersectionOf rdf:nodeID="Ned345128f22047da9b5bd5fbdea1aa8a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfaf9dc9ce5fc4177b6244313d1d96129">
+    <rdf:rest rdf:nodeID="N7b2409e3b9784d8da6ad8b234c1761f3"/>
+    <rdf:first rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17089"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#adjacentTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>adjacent to</rdfs:label>
+    <mommis:legacyIRI rdf:resource="http://example.org/ontology#adjacentTo"/>
+    <mommis:reviewStatus>Legacy relation; alignment pending; not used for biological assertions in this draft</mommis:reviewStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17089">
+    <rdfs:label>glycoprotein</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#legacyIRI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/mommis#legacyDefinition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
