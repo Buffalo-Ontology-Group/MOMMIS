@@ -1,4 +1,4 @@
-import {selectRecords,validateData,toTurtle} from './model.mjs';
+import {selectRecords,validateData,toTurtle,toReviewCsv} from './model.mjs';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key='mommis-pilot-reviews-v1';
@@ -14,6 +14,7 @@ function render(){
   $('count').textContent=`${records.length} evidence record${records.length===1?'':'s'} · ${new Set(records.map(r=>r.sourceId)).size} distinct studies · all seed records await domain review`;
   $('records').innerHTML=records.length?records.map(r=>`<button class="record" data-id="${r.id}" aria-pressed="${r.id===selected}"><div class="tags"><span class="tag ${r.system==='Animal'?'animal':''}">${escape(r.system)}</span><span class="tag">${escape(r.exposureType)}</span><span class="record-id">${r.id}</span></div><h2>${escape(r.title)}</h2><p>${escape(r.strain)} · ${escape(r.stage)}</p><small>${escape(source(r.sourceId).citation)}</small></button>`).join(''):`<div class="empty"><h2>No records in this pilot view</h2><p>${$('system').value==='Human'?'No human studies have been curated into this prototype.':$('glycan').value==='3fl'?'3-FL has an identifier record, but no curated biological evidence yet.':'Try clearing the search or filters.'}</p><p>This is a coverage gap in this dataset, not evidence that the relationship is absent.</p></div>`;
   for(const b of $('records').querySelectorAll('button'))b.onclick=()=>{selected=b.dataset.id;render();};
+  $('export-csv').disabled=records.length===0;
   renderDetail();
 }
 function renderDetail(){
@@ -51,6 +52,7 @@ try {
   $('clear').onclick=()=>{$('search').value='';$('glycan').value='all';$('system').value='all';render();};
   for(const b of document.querySelectorAll('[data-question]'))b.onclick=()=>{if(b.dataset.question==='sources'){showView('sources');return;}$('search').value=b.dataset.question==='utilization'?'growth':'Th17';$('glycan').value='all';$('system').value='all';render();};
   $('export-json').disabled=$('export-rdf').disabled=false;
+  $('export-csv').onclick=()=>{download('mommis-review.csv',toReviewCsv(data,filters(),reviews),'text/csv;charset=utf-8');toast('Exported filtered evidence and personal notes for review.');};
   $('export-json').onclick=()=>{download('mommis-pilot-with-notes.json',JSON.stringify({...data,personalReviews:reviews},null,2),'application/json');toast('Exported the complete dataset and personal notes.');};
   $('export-rdf').onclick=()=>{download('mommis-pilot.ttl',toTurtle(data),'text/turtle');toast('Exported study records. Personal notes are in the JSON export.');};
   if(!storageAvailable)$('storage-state').textContent='Browser storage unavailable. Export notes before leaving.';

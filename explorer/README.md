@@ -50,4 +50,10 @@ The supplied SPARQL example works on the exported graph when loaded into a tripl
 
 ## Next small contribution
 
-Review E001 against Figure 2 of Zabel et al., transcribe the substrate concentration with its source location, and have a domain reviewer check the wording. Then agree the first formal relation mapping with Alex and Matthew before expanding the ontology.
+Review E001 against Figure 2 of Zabel et al., transcribe the substrate concentration with its source location, and have a domain reviewer check the wording. Then agree the first formal relation mapping with Alex Diehl before expanding the ontology.
+
+## Review handoff
+
+Search accepts glycan names, MilkOligoDB IDs, GlyTouCan accessions, study citations and DOI URLs in addition to evidence text and strains. Search does not create evidence for identifier-only glycans.
+
+Use **Export filtered review CSV** in the evidence view to share the currently matching records with Alex. Each row retains the study source, mixture/intervention context, comparator, interpretation boundary, draft scientific status, and personal review notes. Multiple rows can belong to the same study; use Source ID to identify those rows. CSV export is disabled when no records match. It does not send anything automatically or update the dataset. Formula-like text is prefixed with an apostrophe for spreadsheet safety; the JSON export preserves the original text.
