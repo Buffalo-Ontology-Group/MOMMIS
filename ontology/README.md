@@ -1,3 +1,7 @@
+> **Updated decision, 2026-10-14:** prebiotic **disposition** is agreed (not role). See [the disposition pattern](PREBIOTIC_PATTERN.md). The canonical aligned ontology now has 25 local classes. Earlier review notes below describe the pre-alignment state where explicitly noted.
+
+> **Canonical edit source:** `mommis-aligned.owl`. The [backend](../server/README.md) can read this file directly from GitHub. The aligned Turtle and interface snapshots are derived exports.
+
 > **For the combined version incorporating the older MOMMIS models, open `mommis-aligned.owl` or `mommis-aligned.ttl`. See [Alignment review](ALIGNMENT_REVIEW.md). This page documents the earlier four-class pattern.**
 
 # MOMMIS milk core — proposed pattern for review
@@ -39,7 +43,7 @@ The explorer's project mapping uses GlyTouCan **G49708ZB** for 2′-FL. The ChEB
 2. Is `part of some milk` an acceptable context restriction? How should we represent extracted components, synthetic 2′-FL, and molecules after ingestion? This file does not resolve temporal membership.
 3. Which external ontology versions and import extraction approach should be used? Which local namespace/ID policy should replace the temporary namespace?
 4. How should a particular experimental material and microbial process connect to the existing provenance-aware study assertions?
-5. Should prebiotic activity use a role or disposition, and how should microbial proliferation be separated from demonstrated host benefit?
+5. Prebiotic activity uses a disposition. How should measured microbial proliferation be separated from demonstrated host benefit?
 
 ## Validation and next step
 

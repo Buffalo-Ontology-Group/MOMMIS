@@ -6,7 +6,7 @@ let data,selected=null,reviews={},storageAvailable=true;
 try {const raw=JSON.parse(localStorage.getItem(key)||'{}');if(raw&&typeof raw==='object'&&!Array.isArray(raw))reviews=raw;}catch{storageAvailable=false;}
 function toast(message){$('toast').textContent=message;$('toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').style.display='none',3500);}
 function source(id){return data.sources.find(s=>s.id===id);}
-function showView(view){for(const name of ['evidence','molecules','sources'])$(name+'-view').hidden=name!==view;for(const b of document.querySelectorAll('[data-view]')){b.classList.toggle('active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');}}
+function showView(view){for(const name of ['evidence','molecules','sources','ontology'])$(name+'-view').hidden=name!==view;for(const b of document.querySelectorAll('[data-view]')){b.classList.toggle('active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');}}
 function filters(){return {query:$('search').value,glycan:$('glycan').value,system:$('system').value};}
 function render(){
   const records=selectRecords(data,filters());
@@ -58,3 +58,38 @@ try {
   if(!storageAvailable)$('storage-state').textContent='Browser storage unavailable. Export notes before leaving.';
   render();renderMolecules();renderSources();
 }catch(error){$('count').textContent='The pilot could not be loaded.';$('records').innerHTML='<div class="empty"><h2>Start the local web server</h2><p>From the repository root, run <code>python3 -m http.server 8000</code> and open http://localhost:8000/explorer/.</p></div>';$('detail').textContent=error.message;}
+
+// The standalone build substitutes an OWL-derived snapshot here.
+const embeddedOntology = null;
+let ontologyData=null,ontologyTimer=null;
+function renderOntology(){
+  if(!ontologyData)return;
+  const q=$('ontology-search').value.toLowerCase();
+  const classes=ontologyData.classes.filter(c=>[c.label,c.iri].join(' ').toLowerCase().includes(q));
+  $('ontology-classes').innerHTML=classes.map(c=>`<article class="source"><span class="tag">${c.local?'MOMMIS draft class':'External term declaration'}</span><h3>${escape(c.label)}</h3><code>${escape(c.iri)}</code><p><strong>Asserted parents:</strong> ${c.parents.map(x=>escape(x.label)).join('; ')||'None asserted in this module'}</p><p><strong>Equivalent to:</strong> ${c.equivalentTo.map(escape).join('; ')||'No equivalence asserted'}</p>${c.comments.map(x=>`<p>${escape(x)}</p>`).join('')}${c.reviewStatus.map(x=>`<p>${escape(x)}</p>`).join('')}</article>`).join('')||'<p>No matching ontology classes.</p>';
+}
+async function loadOntology(){
+  $('refresh-ontology').disabled=true;
+  try{
+    let value=embeddedOntology,live=false;
+    if(!value){
+      try{
+        const response=await fetch('/api/ontology',{cache:'no-store'});
+        if(!response.ok)throw Error('Backend unavailable');
+        value=await response.json();if(!Array.isArray(value.classes))throw Error('Invalid ontology response');live=true;
+      }catch{
+        const response=await fetch('./data/ontology.json',{cache:'no-store'});
+        if(!response.ok)throw Error('Ontology unavailable. Run the MOMMIS backend or rebuild the snapshot.');
+        value=await response.json();
+      }
+    }
+    ontologyData=value;
+    $('ontology-status').textContent=`${live?(value.status==='stale'?'Update failed — last valid ontology':'Backend connected'):'Offline snapshot — does not automatically update from GitHub'} · ${value.classes.length} named classes · OWL fingerprint ${value.sha256.slice(0,12)} · ${value.source}. ${value.error||''}`;
+    renderOntology();
+    if(live&&!ontologyTimer)ontologyTimer=setInterval(loadOntology,30000);
+  }catch(error){$('ontology-status').textContent=error.message;}
+  finally{$('refresh-ontology').disabled=false;}
+}
+$('ontology-search').oninput=renderOntology;
+$('refresh-ontology').onclick=loadOntology;
+await loadOntology();

@@ -1,3 +1,5 @@
+> **Updated decision, 2026-10-14:** prebiotic **disposition** is agreed (not role). See [the disposition pattern](PREBIOTIC_PATTERN.md). The canonical aligned ontology now has 25 local classes. Earlier review notes below describe the pre-alignment state where explicitly noted.
+
 # MOMMIS aligned draft — review with Alex
 
 **Open `mommis-aligned.owl` in Protégé.** `mommis-aligned.ttl` encodes the same graph. This combined review draft supersedes the four-class file as the meeting entry point; the original four-class pattern and the two supplied source files remain available.
@@ -29,11 +31,11 @@ There are 18 local classes in the aligned file. External classes are declaration
 ## Not yet resolved
 
 - HMO membership: chemical structural family versus molecules currently occurring in human milk; no equivalence to the new milk-associated component classes is asserted yet.
-- Prebiotic role versus disposition; microbial proliferation versus observed culture growth and host benefit.
+- Disposition choice is resolved. Measured microbial proliferation versus observed culture growth and demonstrated host benefit still requires careful evidence mapping.
 - Temporal scope of `part of milk`, especially extracted or ingested material.
 - Detailed GO/CL/UBERON mappings and the operational definitions of immune health and microbiota balance.
 - The existing 2′-FL GlyTouCan discrepancy: project G49708ZB versus ChEBI's G10422IZ cross-reference. No exact mapping is asserted.
-- Interface integration: the explorer still reads JSON; it does not reason over this file.
+- Interface integration: the ontology tab now reads the OWL backend; evidence records remain separately curated and no full DL reasoning is performed by the server.
 
 ## Validation
 

@@ -9,7 +9,7 @@ t=Graph().parse(root/'mommis-aligned.ttl',format='turtle')
 assert isomorphic(g,t),'OWL/XML and Turtle graphs differ'
 M=Namespace('http://purl.obolibrary.org/obo/mommis#');O=Namespace('http://purl.obolibrary.org/obo/')
 local={s for s in g.subjects(RDF.type,OWL.Class) if str(s).startswith(str(M))}
-assert len(local)==18
+assert len(local)==25
 assert not set(g.subjects(RDF.type,OWL.NamedIndividual))&local
 assert (M.HumanMilkOligosaccharides,RDFS.subClassOf,O.CHEBI_50699) in g
 assert (M.HumanMilkOligosaccharides,RDFS.subClassOf,O.CHEBI_75771) not in g
@@ -28,5 +28,7 @@ DeductiveClosure(OWLRL_Semantics).expand(g)
 assert (X.milkMolecule,RDF.type,M.MilkAssociated2FL) in g
 assert (X.syntheticMolecule,RDF.type,M.MilkAssociated2FL) not in g
 assert (X.milkMolecule,RDF.type,O.UBERON_0001913) not in g
-print('PASS: equivalent RDF/XML/Turtle graphs, 18 local classes, corrected category guards, and OWL RL context-specific classification with synthetic fixtures.')
+assert (M.PrebioticDisposition,RDFS.subClassOf,O.BFO_0000016) in g
+assert not (M.PrebioticDisposition,RDFS.subClassOf,O.BFO_0000023) in g
+print('PASS: equivalent RDF/XML/Turtle graphs, 25 local classes, corrected category guards, and OWL RL context-specific classification with synthetic fixtures.')
 print('Full DL consistency and external import closure NOT validated.')

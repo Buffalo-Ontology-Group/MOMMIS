@@ -1,4 +1,6 @@
-# HMO Evidence Explorer — pilot 0.1
+> For automatic OWL updates from GitHub, use the [ontology backend](../server/README.md). Static and portable previews show a labeled ontology snapshot.
+
+# MOMMIS Evidence Explorer — pilot 0.1
 
 A small research interface connecting HMO identity to **study-specific** evidence. It has no runtime dependencies, no backend, no accounts, and no analytics. It runs as static files.
 
