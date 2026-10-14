@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://example.org/mommis/draft/milk-core/">
+    <rdfs:label>MOMMIS milk-component pattern — review draft</rdfs:label>
+    <owl:versionInfo>0.1.0-draft-2026-10-14</owl:versionInfo>
+    <dct:description>Four proposed context-specific component classes based on milk_ontology_parent_decisions.xlsm. Not an approved ontology release. External IRIs are declarations only, not full ontology imports. No prebiotic or clinical-effect axioms.</dct:description>
+    <dct:source>milk_ontology_parent_decisions.xlsm: Term parent decisions rows 11, 13, 16; Glycoprotein import row 9; 2FL example row 5. Attached snapshot reviewed 2026-10-14.</dct:source>
+  </owl:Ontology>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description" />
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source" />
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001913">
+    <rdfs:label>milk</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+    <rdfs:label>chemical entity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16646">
+    <rdfs:label>carbohydrate</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17089">
+    <rdfs:label>glycoprotein</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_147155">
+    <rdfs:label>2'-fucosyllactose</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+    <rdfs:label>part of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://example.org/mommis/draft/milk-core/MilkChemicalComponent">
+    <rdfs:label>milk chemical component</rdfs:label>
+    <rdfs:comment>A chemical entity that is part of some milk. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050" />
+            <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001913" />
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/mommis/draft/milk-core/MilkCarbohydrate">
+    <rdfs:label>milk carbohydrate</rdfs:label>
+    <rdfs:comment>A carbohydrate that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16646" />
+    <rdfs:subClassOf rdf:resource="https://example.org/mommis/draft/milk-core/MilkChemicalComponent" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16646" />
+          <rdf:Description rdf:about="https://example.org/mommis/draft/milk-core/MilkChemicalComponent" />
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/mommis/draft/milk-core/MilkGlycoprotein">
+    <rdfs:label>milk glycoprotein</rdfs:label>
+    <rdfs:comment>A glycoprotein that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17089" />
+    <rdfs:subClassOf rdf:resource="https://example.org/mommis/draft/milk-core/MilkChemicalComponent" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17089" />
+          <rdf:Description rdf:about="https://example.org/mommis/draft/milk-core/MilkChemicalComponent" />
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://example.org/mommis/draft/milk-core/MilkAssociated2FL">
+    <rdfs:label>milk-associated 2'-fucosyllactose</rdfs:label>
+    <rdfs:comment>A 2'-fucosyllactose entity that is a milk carbohydrate. This contextual class is distinct from generic 2'-fucosyllactose, including synthesized material. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_147155" />
+    <rdfs:subClassOf rdf:resource="https://example.org/mommis/draft/milk-core/MilkCarbohydrate" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_147155" />
+          <rdf:Description rdf:about="https://example.org/mommis/draft/milk-core/MilkCarbohydrate" />
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+</rdf:RDF>
