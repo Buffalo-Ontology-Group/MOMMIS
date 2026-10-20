@@ -17,3 +17,7 @@ Open **http://localhost:8000/explorer/**. Read the [pilot documentation](explore
 ## OWL-backed explorer
 
 For the ontology-connected interface, follow [backend setup](server/README.md). The backend can track the OWL file in GitHub, while a portable HTML download uses a labeled snapshot. The source of truth is `ontology/mommis-aligned.owl`; `.ttl` and JSON/HTML snapshots are derived artifacts.
+
+## Full milk-components graph
+
+The [milk-components graph viewer](explorer/knowledge-graph/index.html) provides a self-contained overview, directed neighborhoods, searchable inventories, a relationship matrix, source coverage, and evidence inspection for the supplied 5,663-entity corpus. Download the HTML and open it locally, or follow its link from the served Evidence Explorer. See [scope and provenance](explorer/knowledge-graph/README.md) before interpreting imported validation statuses.
