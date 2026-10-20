@@ -36,3 +36,9 @@ python3 scripts/build-knowledge-graph.py
 Edit `viewer.template.html` for UI changes. Replace `source/original.html` only with an authorized updated export, then rebuild. The script verifies unique IDs and complete endpoints. Browser visual verification was unavailable in the build environment; see PR validation details.
 
 Interaction validation uses `tests/knowledge-graph.test.cjs` with jsdom (development-only). It checks dataset equality, full-table pagination, search, neighborhood selection, evidence inspection, matrix drilldown, 112 source rows, source filtering, and empty results. These DOM checks do not substitute for visual browser review.
+
+## Duplicate cleanup
+
+The reproducible build now merges 76 clear duplicate entity records (5,663 → 5,587). Unicode typography/case variants are matched within entity type; measurement unit case is preserved. A reviewed allowlist permits same-type singular/plural variants sharing ontology IDs. We do not merge broad classes with subtypes or conflicting classifications solely because they share an ID. Four remaining shared-ID groups are listed in `deduplication-report.json` for review.
+
+All 6,032 assertions remain: repeated canonical endpoint pairs with different evidence, sources, pages, scores or statuses are distinct assertions. Exact duplicate assertions are collapsed if present. Original assertions, original IDs, aliases and merged node records are retained in the downloadable JSON; the supplied HTML archive is unchanged. Aliases are searchable and visible in entity details. This does not establish that every possible semantic synonym has been reconciled.
