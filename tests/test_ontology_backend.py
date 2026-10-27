@@ -7,7 +7,7 @@ from ontology_backend import parse_ontology,OntologyStore,Handler,ThreadingHTTPS
 RAW=(root/'ontology/mommis-aligned.owl').read_bytes()
 class OntologyBackendTests(unittest.TestCase):
  def test_reads_real_axioms(self):
-  data=parse_ontology(RAW);self.assertEqual(sum(c['local'] for c in data['classes']),25)
+  data=parse_ontology(RAW);self.assertEqual(sum(c['local'] for c in data['classes']),18)
   c=next(c for c in data['classes'] if c['iri'].endswith('#MilkChemicalComponent'))
   self.assertIn('part of some milk',c['equivalentTo'][0])
  def test_local_edit_updates_without_restart(self):
@@ -30,5 +30,7 @@ class OntologyBackendTests(unittest.TestCase):
   try:
    with urlopen(f'http://127.0.0.1:{server.server_port}/api/ontology') as response:
     value=json.load(response);self.assertEqual(value['status'],'current');self.assertIn('classes',value)
+   with urlopen(f'http://127.0.0.1:{server.server_port}/api/ontology.owl') as response:
+    self.assertEqual(response.read(),RAW)
   finally:server.shutdown();server.server_close();worker.join()
 if __name__=='__main__':unittest.main()

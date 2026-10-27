@@ -49,12 +49,12 @@ def parse_ontology(raw):
       'generatedAt':datetime.now(timezone.utc).isoformat()}
 
 class OntologyStore:
-    def __init__(self,path,github=False,branch='feature/hmo-evidence-explorer',interval=30,fetcher=None):
+    def __init__(self,path,github=False,branch='feature/mommis-mvp-v2',interval=30,fetcher=None):
         self.path=Path(path);self.github=github;self.interval=interval;self.next_check=0
         self.url='https://raw.githubusercontent.com/Buffalo-Ontology-Group/MOMMIS/'+quote(branch,safe='/')+'/ontology/mommis-aligned.owl'
-        self.fetcher=fetcher or self.fetch_remote;self.lock=threading.Lock();self.value=None
+        self.fetcher=fetcher or self.fetch_remote;self.lock=threading.Lock();self.value=None;self.raw=None
         try:
-            self.value=parse_ontology(self.path.read_bytes());self.value['source']='Local OWL file'
+            self.raw=self.path.read_bytes();self.value=parse_ontology(self.raw);self.value['source']='Local OWL file'
         except Exception:pass
     def fetch_remote(self):
         with urlopen(Request(self.url,headers={'User-Agent':'MOMMIS-Explorer','Cache-Control':'no-cache'}),timeout=10) as response:
@@ -68,7 +68,7 @@ class OntologyStore:
                     raw=self.fetcher() if self.github else self.path.read_bytes()
                     value=parse_ontology(raw)
                     value.update(source=self.url if self.github else 'Local OWL file',status='current',checkedAt=datetime.now(timezone.utc).isoformat(),refreshSeconds=self.interval)
-                    self.value=value
+                    self.value=value;self.raw=raw
                 except Exception as exc:
                     if self.value is None:raise ValueError('No usable ontology: '+str(exc))
                     self.value=dict(self.value,status='stale',error='Update failed; showing last valid ontology: '+str(exc),refreshSeconds=self.interval)
@@ -77,6 +77,12 @@ class OntologyStore:
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path=urlparse(self.path).path
+        if path=='/api/ontology.owl':
+            try:
+                self.server.ontology.get();payload=self.server.ontology.raw;status=200
+            except Exception:
+                self.send_error(503,'No usable ontology');return
+            self.send_response(status);self.send_header('Content-Type','application/rdf+xml');self.send_header('Cache-Control','no-store');self.end_headers();self.wfile.write(payload);return
         if path=='/api/ontology':
             try:payload=json.dumps(self.server.ontology.get()).encode();status=200
             except Exception as exc:payload=json.dumps({'error':str(exc)}).encode();status=503
@@ -90,7 +96,7 @@ class Handler(SimpleHTTPRequestHandler):
     def list_directory(self,path):self.send_error(404);return None
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--github',action='store_true');p.add_argument('--branch',default='feature/hmo-evidence-explorer');p.add_argument('--port',type=int,default=8000);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--github',action='store_true');p.add_argument('--branch',default='feature/mommis-mvp-v2');p.add_argument('--port',type=int,default=8000);a=p.parse_args()
     server=ThreadingHTTPServer(('127.0.0.1',a.port),partial(Handler,directory=str(ROOT)))
     server.ontology=OntologyStore(ROOT/'ontology/mommis-aligned.owl',github=a.github,branch=a.branch)
     print(f'MOMMIS: http://localhost:{a.port}/explorer/ (GitHub sync: {a.github})',flush=True)

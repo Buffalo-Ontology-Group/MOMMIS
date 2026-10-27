@@ -1,0 +1,52 @@
+{
+  "previousCommit": "55097946fe0c3e63f81f8854167e3f1f45382ac6",
+  "previousEntities": 5587,
+  "previousAssertions": 6032,
+  "selectedEntities": 18,
+  "selectedEvidenceRecords": 12,
+  "selection": "Explicit reviewed shortlist; not a random or degree-ranked graph filter",
+  "removedOntologyClasses": [
+    "Phagocytosis",
+    "BCellActivation",
+    "TCellActivation",
+    "AdaptiveImmuneResponse",
+    "BioactivePeptide",
+    "MilkFatGlobuleMembrane",
+    "MilkGlycoprotein"
+  ],
+  "exclusionReasons": [
+    "Non-HMO bioactives, peptides, MFGM and unrelated nutrients",
+    "Analytical methods, measurement-value nodes and gene/enzyme detail",
+    "Adult outcomes, business claims and broad unspecific benefit claims",
+    "Redundant mentions and unsupported causal-chain shortcuts"
+  ],
+  "retainedEvidenceIds": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012"
+  ],
+  "retentionOrigins": {
+    "E001": "PR #2 pilot record E001",
+    "E002": "PR #2 pilot record E002",
+    "E003": "PR #2 pilot record E003",
+    "E004": "Immune actors!5",
+    "E005": "Immune actors!7",
+    "E006": "Immune actors!9",
+    "E007": "Immune actors!10",
+    "E008": "Immune actors!11",
+    "E009": "Immune actors!12",
+    "E010": "Immune actors!12",
+    "E011": "Immune actors!12",
+    "E012": "Immune actors!12"
+  },
+  "preservedReference": "https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/2"
+}

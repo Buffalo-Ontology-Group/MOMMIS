@@ -1,3 +1,5 @@
+> MVP v2 note: the active module now retains 18 local classes. Historical notes below describe PR #2. Use the root README and docs/MVP_SCOPE.md for the current launch instructions, scope and branch.
+
 > **Updated decision, 2026-10-14:** prebiotic **disposition** is agreed (not role). See [the disposition pattern](PREBIOTIC_PATTERN.md). The canonical aligned ontology now has 25 local classes. Earlier review notes below describe the pre-alignment state where explicitly noted.
 
 # MOMMIS aligned draft — review with Alex

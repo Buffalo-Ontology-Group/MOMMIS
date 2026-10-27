@@ -1,3 +1,5 @@
+> MVP v2 note: the active module now retains 18 local classes. Historical notes below describe PR #2. Use the root README and docs/MVP_SCOPE.md for the current launch instructions, scope and branch.
+
 # MOMMIS ontology backend
 
 The canonical editable ontology is **`ontology/mommis-aligned.owl`**. The backend parses this OWL RDF/XML file and exposes its named classes, labels, asserted parents, equivalence expressions, and review notes at `/api/ontology`. The browser's **Ontology** tab uses that API. There is no separate manually maintained class table.

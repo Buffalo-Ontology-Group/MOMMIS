@@ -1,0 +1,5 @@
+PREFIX mvp: <https://w3id.org/mommis/mvp/>
+SELECT ?assertion ?source ?location ?origin ?status WHERE {
+ ?assertion a mvp:EvidenceAssertion; mvp:source ?source; mvp:sourceLocation ?location;
+ mvp:origin ?origin; mvp:reviewStatus ?status.
+} ORDER BY ?assertion

@@ -42,24 +42,6 @@
       "reviewStatus": []
     },
     {
-      "iri": "http://purl.obolibrary.org/obo/CHEBI_16670",
-      "label": "peptide",
-      "local": false,
-      "parents": [],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": []
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/CHEBI_17089",
-      "label": "glycoprotein",
-      "local": false,
-      "parents": [],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": []
-    },
-    {
       "iri": "http://purl.obolibrary.org/obo/CHEBI_24431",
       "label": "chemical entity",
       "local": false,
@@ -141,38 +123,6 @@
       "reviewStatus": []
     },
     {
-      "iri": "http://purl.obolibrary.org/obo/mommis#AdaptiveImmuneResponse",
-      "label": "adaptive immune response",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
-          "label": "biological process"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
-      ]
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/mommis#BCellActivation",
-      "label": "b cell activation",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
-          "label": "biological process"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
-      ]
-    },
-    {
       "iri": "http://purl.obolibrary.org/obo/mommis#BacterialCellPopulationProliferation",
       "label": "bacterial cell population proliferation",
       "local": true,
@@ -188,24 +138,6 @@
       ],
       "reviewStatus": [
         "Disposition choice agreed; formalization from supplied slide, pending full import validation"
-      ]
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/mommis#BioactivePeptide",
-      "label": "bioactive peptide",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/CHEBI_16670",
-          "label": "peptide"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [
-        "A peptide considered for its biological activity; the criterion and role/disposition pattern remain to be specified."
-      ],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
       ]
     },
     {
@@ -397,62 +329,6 @@
       "reviewStatus": []
     },
     {
-      "iri": "http://purl.obolibrary.org/obo/mommis#MilkFatGlobuleMembrane",
-      "label": "milk fat globule membrane",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/BFO_0000040",
-          "label": "material entity"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [
-        "The membrane structure surrounding a milk fat globule. More specific upstream mapping remains to be reviewed."
-      ],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
-      ]
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/mommis#MilkGlycoprotein",
-      "label": "milk glycoprotein",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/CHEBI_17089",
-          "label": "glycoprotein"
-        },
-        {
-          "iri": "http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent",
-          "label": "milk chemical component"
-        }
-      ],
-      "equivalentTo": [
-        "(glycoprotein AND milk chemical component)"
-      ],
-      "comments": [
-        "A glycoprotein that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed."
-      ],
-      "reviewStatus": []
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/mommis#Phagocytosis",
-      "label": "phagocytosis",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
-          "label": "biological process"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
-      ]
-    },
-    {
       "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL",
       "label": "positive regulation of bacterial cell population proliferation by 2'-FL",
       "local": true,
@@ -582,31 +458,15 @@
       "reviewStatus": [
         "Disposition choice agreed; formalization from supplied slide, pending full import validation"
       ]
-    },
-    {
-      "iri": "http://purl.obolibrary.org/obo/mommis#TCellActivation",
-      "label": "t cell activation",
-      "local": true,
-      "parents": [
-        {
-          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
-          "label": "biological process"
-        }
-      ],
-      "equivalentTo": [],
-      "comments": [],
-      "reviewStatus": [
-        "Proposed alignment; Alex Diehl review pending"
-      ]
     }
   ],
   "version": [
-    "0.3.0-review-2026-10-14"
+    "2.0.0-mvp"
   ],
-  "sha256": "93d3140667958c52cb252b4d6aa8da63dbf6939af2ddff737cddb417ef1cf2bd",
+  "sha256": "2a21a252a2973101ba216eb8792760c9763a888d96e111cda0b1070680b64ac7",
   "importsFollowed": false,
   "reasoning": "Asserted OWL structure only; no DL reasoning",
-  "generatedAt": "2026-10-14T15:58:12.773362+00:00",
+  "generatedAt": "2026-10-27T16:45:51.844107+00:00",
   "source": "Bundled OWL snapshot",
   "status": "snapshot"
 }

@@ -1,0 +1,740 @@
+{
+  "version": "2.0.0-mvp",
+  "date": "2026-10-27",
+  "title": "MOMMIS Evidence Explorer",
+  "previousPR": 2,
+  "previousCommit": "55097946fe0c3e63f81f8854167e3f1f45382ac6",
+  "branch": "feature/mommis-mvp-v2",
+  "sources": [
+    {
+      "id": "mapping",
+      "title": "MilkOligoDB–GlyTouCan mapping",
+      "citation": "Project mapping sheet, final_postWF, rows 682–683; accessed 9 October 2026.",
+      "url": "https://docs.google.com/spreadsheets/d/1Bjs_UJ3X432zWDvTbLnC0ZzXrImsfqT-AqUIROy9XMo/edit#gid=1219533678&range=A682:W683",
+      "kind": "Project dataset",
+      "role": "Molecular identifiers only; shared project data, authorship not independently established."
+    },
+    {
+      "id": "zabel2019",
+      "title": "Bi-26 metabolism of 2′-fucosyllactose",
+      "citation": "Zabel et al. Scientific Reports 9, 7983 (2019).",
+      "url": "https://doi.org/10.1038/s41598-019-43780-9",
+      "kind": "Primary paper",
+      "role": "Culture growth and metabolite observations; full-text sections inspected."
+    },
+    {
+      "id": "mulakala2026",
+      "title": "B. infantis and HMOs in germ-free mice",
+      "citation": "Mulakala et al. mSystems 11(7), e00392-26 (2026).",
+      "url": "https://doi.org/10.1128/msystems.00392-26",
+      "kind": "Primary paper",
+      "role": "Existing repository PDF; abstract, study design, immune-cell results and figure captions inspected.",
+      "repositoryPath": "../Literature/msystems.00392-26.pdf"
+    },
+    {
+      "id": "parents",
+      "title": "Initial ontology mapping workbook",
+      "citation": "milk_ontology_parent_decisions.xlsm",
+      "url": "https://drive.google.com/file/d/1BYugi_X2EC5UpKSb425u_9kaisUUmur1/view?usp=drivesdk",
+      "kind": "Design source"
+    },
+    {
+      "id": "zabel2020",
+      "title": "Strain-specific fucosyllactose assimilation",
+      "citation": "Zabel et al. Scientific Reports (2020). PMID 32985563.",
+      "url": "https://doi.org/10.1038/s41598-020-72792-z",
+      "kind": "Primary paper"
+    },
+    {
+      "id": "figueroa2021",
+      "title": "2′-FL and epithelial barrier disruption",
+      "citation": "Figueroa-Lozano et al. Journal of Functional Foods (2021).",
+      "url": "https://doi.org/10.1016/j.jff.2021.104630",
+      "kind": "Primary paper"
+    },
+    {
+      "id": "wang2020",
+      "title": "2′-FL and epithelial / adhesion endpoints",
+      "citation": "Wang et al. (2020). PMID 32369957.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32369957/",
+      "kind": "Primary paper"
+    },
+    {
+      "id": "goehring2016",
+      "title": "Formula intervention and infant cytokines",
+      "citation": "Goehring et al. Journal of Nutrition (2016). PMID 27798337.",
+      "url": "https://doi.org/10.3945/jn.116.236919",
+      "kind": "Primary paper"
+    },
+    {
+      "id": "luo2023",
+      "title": "Early-life 2′-FL supplementation in mice",
+      "citation": "Luo et al. Journal of Dairy Science (2023). PMID 37641283.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37641283/",
+      "kind": "Primary paper"
+    }
+  ],
+  "glycans": [
+    {
+      "id": "2fl",
+      "label": "2′-FL",
+      "name": "2′-Fucosyllactose",
+      "aliases": [
+        "2'-FL",
+        "2-FL",
+        "2FL"
+      ],
+      "glytoucan": "G49708ZB",
+      "milkOligoId": "2_0_1_0_0a",
+      "structure": "Fuc(α1–2)Gal(β1–4)Glc",
+      "wurcs": "WURCS=2.0/3,3,2/[u2122h][a2112h-1b_1-5][a1221m-1a_1-5]/1-2-3/a4-b1_b2-c1",
+      "sourceId": "mapping",
+      "sourceLocation": "final_postWF!A682:W682",
+      "mappingStatus": "Copied from project mapping; independent registry reconciliation pending.",
+      "fucoseCount": 1
+    },
+    {
+      "id": "3fl",
+      "label": "3-FL",
+      "name": "3-Fucosyllactose",
+      "aliases": [
+        "3FL"
+      ],
+      "glytoucan": "G94468TS",
+      "milkOligoId": "2_0_1_0_0b",
+      "structure": "Gal(β1–4)[Fuc(α1–3)]Glc",
+      "wurcs": "WURCS=2.0/3,3,2/[u2122h][a1221m-1a_1-5][a2112h-1b_1-5]/1-2-3/a3-b1_a4-c1",
+      "sourceId": "mapping",
+      "sourceLocation": "final_postWF!A683:W683",
+      "mappingStatus": "Copied from project mapping; independent registry reconciliation pending.",
+      "fucoseCount": 1
+    }
+  ],
+  "entities": [
+    {
+      "id": "2fl",
+      "label": "2′-Fucosyllactose",
+      "kind": "Molecule",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/CHEBI_147155",
+      "note": ""
+    },
+    {
+      "id": "3fl",
+      "label": "3-Fucosyllactose",
+      "kind": "Molecule",
+      "ontologyIRI": null,
+      "note": "Identifier comparator; no selected evidence assertions."
+    },
+    {
+      "id": "hmo",
+      "label": "Human milk oligosaccharides",
+      "kind": "Molecular family",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides",
+      "note": ""
+    },
+    {
+      "id": "milk",
+      "label": "Maternal milk context",
+      "kind": "Exposure context",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/UBERON_0001913",
+      "note": "Generic imported milk term; human-species context requires separate modeling."
+    },
+    {
+      "id": "infantis",
+      "label": "B. longum subsp. infantis",
+      "kind": "Microbial partner",
+      "ontologyIRI": null,
+      "note": "Keep Bi-26, B79 and ATCC 15697 study contexts distinct."
+    },
+    {
+      "id": "mixture",
+      "label": "B. infantis + three-HMO mixture",
+      "kind": "Intervention",
+      "ontologyIRI": null,
+      "note": "2′-FL, LNT and 3′-SL; not a 2′-FL-only intervention."
+    },
+    {
+      "id": "growth",
+      "label": "Culture growth",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL",
+      "note": ""
+    },
+    {
+      "id": "metabolites",
+      "label": "Fermentation products",
+      "kind": "Measured endpoint",
+      "ontologyIRI": null,
+      "note": ""
+    },
+    {
+      "id": "th17",
+      "label": "MLN Th17-cell proportion",
+      "kind": "Measured endpoint",
+      "ontologyIRI": null,
+      "note": ""
+    },
+    {
+      "id": "uptake",
+      "label": "Carbohydrate uptake",
+      "kind": "Proposed process",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0098704",
+      "note": ""
+    },
+    {
+      "id": "catabolism",
+      "label": "Oligosaccharide catabolism",
+      "kind": "Proposed process",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0009313",
+      "note": ""
+    },
+    {
+      "id": "barrier",
+      "label": "Epithelial barrier response",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0060731",
+      "note": ""
+    },
+    {
+      "id": "adhesion",
+      "label": "Pathogen adhesion",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_1905227",
+      "note": ""
+    },
+    {
+      "id": "cytokines",
+      "label": "Inflammatory cytokines",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0002718",
+      "note": ""
+    },
+    {
+      "id": "siga",
+      "label": "Secretory IgA level",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction",
+      "note": ""
+    },
+    {
+      "id": "il10",
+      "label": "IL-10 level",
+      "kind": "Measured endpoint",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#CytokineProduction",
+      "note": ""
+    },
+    {
+      "id": "muc2",
+      "label": "MUC2 expression",
+      "kind": "Measured endpoint",
+      "ontologyIRI": null,
+      "note": ""
+    },
+    {
+      "id": "ige",
+      "label": "Total serum IgE",
+      "kind": "Measured endpoint",
+      "ontologyIRI": null,
+      "note": ""
+    }
+  ],
+  "records": [
+    {
+      "id": "E001",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "Bi-26 grows with 2′-FL",
+      "statement": "Bi-26 grew with 2′-FL in culture; growth was lower than with lactose and higher than the no-added-carbohydrate control.",
+      "system": "In vitro",
+      "exposureType": "Isolated glycan",
+      "exposure": "2′-FL in culture medium",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "Bi-26 (ATCC SD-6720)",
+      "model": "Anaerobic culture in modified Bifidobacterium medium 58 at 37 °C",
+      "comparator": "Lactose and no-added-carbohydrate controls",
+      "duration": "24-hour growth assay",
+      "dose": "Not transcribed; consult Methods before quantitative reuse.",
+      "endpoint": "Culture growth (A600 and area under growth curve)",
+      "sourceId": "zabel2019",
+      "sourceLocation": "Results: Growth of B. longum subsp. infantis Bi-26 on 2′-FL, and lactose; Figure 2A–B; Methods: Growth conditions",
+      "evidenceSummary": "Growth curves distinguish substrate conditions in the tested strain.",
+      "limitation": "Culture growth is not evidence of infant clinical benefit or utilization by every B. infantis strain.",
+      "stage": "Microbial utilization",
+      "status": "Draft extraction",
+      "nextAction": "Check extraction against Figure 2 and add substrate concentration.",
+      "subject": "2fl",
+      "target": "growth",
+      "stageKey": "utilization",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL",
+      "mappingStatus": "Candidate interpretation; not an equivalence axiom",
+      "reviewStatus": "Draft extraction",
+      "origin": "PR #2 pilot record E001",
+      "aims": [
+        3,
+        4
+      ],
+      "supportLevel": "Prior pilot extraction; expert validation pending"
+    },
+    {
+      "id": "E002",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "Bi-26 fermentation yields metabolites",
+      "statement": "During 2′-FL fermentation, Bi-26 produced acetate, lactate, formate and 1,2-propanediol.",
+      "system": "In vitro",
+      "exposureType": "Isolated glycan",
+      "exposure": "2′-FL in culture medium",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "Bi-26 (ATCC SD-6720)",
+      "model": "Anaerobic bacterial culture; metabolite analysis",
+      "comparator": "Lactose fermentation",
+      "duration": "Growth-phase sampling; timings not transcribed",
+      "dose": "Not transcribed; consult Methods before quantitative reuse.",
+      "endpoint": "Measured fermentation products",
+      "sourceId": "zabel2019",
+      "sourceLocation": "Discussion: metabolite-analysis findings; Figure 1 context",
+      "evidenceSummary": "The paper reports these products from metabolite analysis.",
+      "limitation": "This record does not establish an effect of those metabolites on host immune cells. It shares a study with E001 and is not independent replication.",
+      "stage": "Microbial metabolites",
+      "status": "Draft extraction",
+      "nextAction": "Link each product to its results figure and a reviewed chemical identifier.",
+      "subject": "2fl",
+      "target": "metabolites",
+      "stageKey": "metabolism",
+      "ontologyIRI": null,
+      "mappingStatus": "Candidate interpretation; not an equivalence axiom",
+      "reviewStatus": "Draft extraction",
+      "origin": "PR #2 pilot record E002",
+      "aims": [
+        3,
+        4
+      ],
+      "supportLevel": "Prior pilot extraction; expert validation pending"
+    },
+    {
+      "id": "E003",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "A combined intervention changes MLN Th17 proportions",
+      "statement": "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group.",
+      "system": "Animal",
+      "exposureType": "Mixture + microbe",
+      "exposure": "B. infantis ATCC 15697 plus 2′-FL, LNT and 3′-SL",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "ATCC 15697",
+      "model": "Germ-free mice; four intervention groups",
+      "comparator": "Same HMO mixture without B. infantis",
+      "duration": "14 days; bacterial gavage on days 1, 4 and 9",
+      "dose": "5 mg/day of each HMO (15 mg/day total); 1 × 10^9 CFU per bacterial dosing day",
+      "endpoint": "MLN Th17 cells as a percentage of CD4+ T cells",
+      "sourceId": "mulakala2026",
+      "sourceLocation": "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design",
+      "evidenceSummary": "The result concerns a group comparison in a combined-intervention mouse experiment.",
+      "limitation": "2′-FL was one of three HMOs. The comparison does not isolate a 2′-FL effect, establish a microbial mechanism, or show a clinical benefit in infants.",
+      "stage": "Immune endpoint",
+      "status": "Draft extraction",
+      "nextAction": "Verify Figure 3 and statistical contrast with a domain reviewer; retain the mixture and comparator.",
+      "subject": "mixture",
+      "target": "th17",
+      "stageKey": "immune",
+      "ontologyIRI": null,
+      "mappingStatus": "Candidate interpretation; not an equivalence axiom",
+      "reviewStatus": "Draft extraction",
+      "origin": "PR #2 pilot record E003",
+      "aims": [
+        3,
+        4
+      ],
+      "supportLevel": "Prior pilot extraction; expert validation pending"
+    },
+    {
+      "id": "E004",
+      "title": "2′-FL uptake",
+      "statement": "The workbook links Bi-26 sugar-transport findings to uptake of 2′-FL. Direct transport evidence still needs review.",
+      "subject": "2fl",
+      "target": "uptake",
+      "stageKey": "utilization",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "In vitro",
+      "model": "Bi-26 bacterial culture / transcriptomics",
+      "exposureType": "Isolated glycan",
+      "exposure": "2′-FL culture condition",
+      "comparator": "Lactose condition; exact contrast needs checking",
+      "strain": "Bi-26",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "duration": "Not transcribed",
+      "dose": "Not transcribed",
+      "endpoint": "2′-FL uptake",
+      "sourceId": "zabel2019",
+      "sourceLocation": "Primary passage not yet checked",
+      "origin": "Immune actors!5",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0098704",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Transporter expression does not by itself demonstrate transport flux.",
+      "reviewStatus": "Mapping candidate",
+      "status": "Mapping candidate",
+      "stage": "utilization",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Workbook summary only; primary passage verification pending",
+      "evidenceSummary": "The workbook links Bi-26 sugar-transport findings to uptake of 2′-FL. Direct transport evidence still needs review."
+    },
+    {
+      "id": "E005",
+      "title": "2′-FL catabolism",
+      "statement": "The workbook identifies strain-specific fucosyllactose assimilation as a candidate 2′-FL catabolic process.",
+      "subject": "2fl",
+      "target": "catabolism",
+      "stageKey": "metabolism",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "In vitro",
+      "model": "B. infantis strain comparison",
+      "exposureType": "Isolated glycan",
+      "exposure": "Fucosyllactose conditions",
+      "comparator": "Confirm exact strain and substrate contrast",
+      "strain": "Not transcribed",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "duration": "Not transcribed",
+      "dose": "Not transcribed",
+      "endpoint": "2′-FL catabolism",
+      "sourceId": "zabel2020",
+      "sourceLocation": "Primary passage not yet checked",
+      "origin": "Immune actors!7",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0009313",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Do not generalize across strains or equate uptake with catabolism.",
+      "reviewStatus": "Mapping candidate",
+      "status": "Mapping candidate",
+      "stage": "metabolism",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Workbook summary only; primary passage verification pending",
+      "evidenceSummary": "The workbook identifies strain-specific fucosyllactose assimilation as a candidate 2′-FL catabolic process."
+    },
+    {
+      "id": "E006",
+      "title": "Epithelial barrier response",
+      "statement": "The workbook reports protection of T84 epithelial layers against induced barrier disruption with isolated 2′-FL.",
+      "subject": "2fl",
+      "target": "barrier",
+      "stageKey": "epithelial",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "In vitro",
+      "model": "Human T84 epithelial cell model",
+      "exposureType": "Isolated glycan",
+      "exposure": "Isolated 2′-FL plus experimental barrier challenge",
+      "comparator": "Challenge control; confirm full design",
+      "strain": "Not transcribed",
+      "organism": "Host endpoint",
+      "duration": "Not transcribed",
+      "dose": "Not transcribed",
+      "endpoint": "Epithelial barrier response",
+      "sourceId": "figueroa2021",
+      "sourceLocation": "Primary passage not yet checked",
+      "origin": "Immune actors!9",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0060731",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "A cell-line finding does not demonstrate infant barrier improvement.",
+      "reviewStatus": "Mapping candidate",
+      "status": "Mapping candidate",
+      "stage": "epithelial",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Workbook summary only; primary passage verification pending",
+      "evidenceSummary": "The workbook reports protection of T84 epithelial layers against induced barrier disruption with isolated 2′-FL."
+    },
+    {
+      "id": "E007",
+      "title": "Pathogen adhesion",
+      "statement": "The workbook reports reduced E. coli O157 adhesion with 2′-FL; the adhesion assay must be separated from mouse colonization results.",
+      "subject": "2fl",
+      "target": "adhesion",
+      "stageKey": "epithelial",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Mixed / verify",
+      "model": "Adhesion assay and mouse model mentioned in workbook",
+      "exposureType": "Study-specific intervention",
+      "exposure": "2′-FL under pathogen challenge",
+      "comparator": "Confirm adhesion-assay control",
+      "strain": "Not transcribed",
+      "organism": "Host endpoint",
+      "duration": "Not transcribed",
+      "dose": "Not transcribed",
+      "endpoint": "Pathogen adhesion",
+      "sourceId": "wang2020",
+      "sourceLocation": "Primary passage not yet checked",
+      "origin": "Immune actors!10",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_1905227",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Do not combine in vitro adhesion and in vivo colonization into one quantitative effect.",
+      "reviewStatus": "Mapping candidate",
+      "status": "Mapping candidate",
+      "stage": "epithelial",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Workbook summary only; primary passage verification pending",
+      "evidenceSummary": "The workbook reports reduced E. coli O157 adhesion with 2′-FL; the adhesion assay must be separated from mouse colonization results."
+    },
+    {
+      "id": "E008",
+      "title": "Infant inflammatory cytokines",
+      "statement": "The workbook reports lower plasma inflammatory cytokines in infants receiving GOS + 2′-FL formula than GOS-only formula.",
+      "subject": "2fl",
+      "target": "cytokines",
+      "stageKey": "immune",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Human infant",
+      "model": "Randomized formula study; biomarker substudy",
+      "exposureType": "Study-specific intervention",
+      "exposure": "Formula containing GOS + 2′-FL",
+      "comparator": "Formula containing GOS without added 2′-FL",
+      "strain": "Not transcribed",
+      "organism": "Host endpoint",
+      "duration": "Not transcribed",
+      "dose": "Not transcribed",
+      "endpoint": "Infant inflammatory cytokines",
+      "sourceId": "goehring2016",
+      "sourceLocation": "Primary passage not yet checked",
+      "origin": "Immune actors!11",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/GO_0002718",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "This is a formula comparison; cytokine concentration is not proof of oral tolerance or disease prevention.",
+      "reviewStatus": "Mapping candidate",
+      "status": "Mapping candidate",
+      "stage": "immune",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Workbook summary only; primary passage verification pending",
+      "evidenceSummary": "The workbook reports lower plasma inflammatory cytokines in infants receiving GOS + 2′-FL formula than GOS-only formula."
+    },
+    {
+      "id": "E009",
+      "title": "Secretory IgA",
+      "statement": "At postnatal day 21, the abstract reports increased sIgA in the 2′-FL group.",
+      "subject": "2fl",
+      "target": "siga",
+      "stageKey": "immune",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Animal",
+      "model": "Neonatal BALB/c mice",
+      "exposureType": "Study-specific intervention",
+      "exposure": "2′-FL arm; separate B79 and combined arms reported",
+      "comparator": "Not specified in abstract; verify full text",
+      "strain": "B79 in bacterial intervention arms; not the isolated 2′-FL arm",
+      "organism": "Host endpoint",
+      "duration": "Endpoint: postnatal day 21",
+      "dose": "Not transcribed",
+      "endpoint": "Secretory IgA",
+      "sourceId": "luo2023",
+      "sourceLocation": "Primary abstract",
+      "origin": "Immune actors!12",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference.",
+      "reviewStatus": "Abstract checked",
+      "status": "Abstract checked",
+      "stage": "immune",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Abstract inspected 2026-10-27; full-text verification pending",
+      "evidenceSummary": "At postnatal day 21, the abstract reports increased sIgA in the 2′-FL group."
+    },
+    {
+      "id": "E010",
+      "title": "IL-10",
+      "statement": "At postnatal day 21, the abstract reports increased IL-10 in the 2′-FL group.",
+      "subject": "2fl",
+      "target": "il10",
+      "stageKey": "immune",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Animal",
+      "model": "Neonatal BALB/c mice",
+      "exposureType": "Study-specific intervention",
+      "exposure": "2′-FL arm; separate B79 and combined arms reported",
+      "comparator": "Not specified in abstract; verify full text",
+      "strain": "B79 in bacterial intervention arms; not the isolated 2′-FL arm",
+      "organism": "Host endpoint",
+      "duration": "Endpoint: postnatal day 21",
+      "dose": "Not transcribed",
+      "endpoint": "IL-10",
+      "sourceId": "luo2023",
+      "sourceLocation": "Primary abstract",
+      "origin": "Immune actors!12",
+      "mappingSourceId": "parents",
+      "ontologyIRI": "http://purl.obolibrary.org/obo/mommis#CytokineProduction",
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference.",
+      "reviewStatus": "Abstract checked",
+      "status": "Abstract checked",
+      "stage": "immune",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Abstract inspected 2026-10-27; full-text verification pending",
+      "evidenceSummary": "At postnatal day 21, the abstract reports increased IL-10 in the 2′-FL group."
+    },
+    {
+      "id": "E011",
+      "title": "MUC2 expression",
+      "statement": "At postnatal day 21, the abstract reports increased MUC2 expression in the B79, 2′-FL and combined groups.",
+      "subject": "2fl",
+      "target": "muc2",
+      "stageKey": "epithelial",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Animal",
+      "model": "Neonatal BALB/c mice",
+      "exposureType": "Study-specific intervention",
+      "exposure": "2′-FL arm; separate B79 and combined arms reported",
+      "comparator": "Not specified in abstract; verify full text",
+      "strain": "B79 in bacterial intervention arms; not the isolated 2′-FL arm",
+      "organism": "Host endpoint",
+      "duration": "Endpoint: postnatal day 21",
+      "dose": "Not transcribed",
+      "endpoint": "MUC2 expression",
+      "sourceId": "luo2023",
+      "sourceLocation": "Primary abstract",
+      "origin": "Immune actors!12",
+      "mappingSourceId": "parents",
+      "ontologyIRI": null,
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference.",
+      "reviewStatus": "Abstract checked",
+      "status": "Abstract checked",
+      "stage": "epithelial",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Abstract inspected 2026-10-27; full-text verification pending",
+      "evidenceSummary": "At postnatal day 21, the abstract reports increased MUC2 expression in the B79, 2′-FL and combined groups."
+    },
+    {
+      "id": "E012",
+      "title": "Total serum IgE",
+      "statement": "At postnatal day 21, the abstract reports decreased total serum IgE in the B79, 2′-FL and combined groups.",
+      "subject": "2fl",
+      "target": "ige",
+      "stageKey": "immune",
+      "glycanIds": [
+        "2fl"
+      ],
+      "system": "Animal",
+      "model": "Neonatal BALB/c mice",
+      "exposureType": "Study-specific intervention",
+      "exposure": "2′-FL arm; separate B79 and combined arms reported",
+      "comparator": "Not specified in abstract; verify full text",
+      "strain": "B79 in bacterial intervention arms; not the isolated 2′-FL arm",
+      "organism": "Host endpoint",
+      "duration": "Endpoint: postnatal day 21",
+      "dose": "Not transcribed",
+      "endpoint": "Total serum IgE",
+      "sourceId": "luo2023",
+      "sourceLocation": "Primary abstract",
+      "origin": "Immune actors!12",
+      "mappingSourceId": "parents",
+      "ontologyIRI": null,
+      "mappingStatus": "Candidate process mapping; measured endpoint is not automatically a process",
+      "limitation": "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference.",
+      "reviewStatus": "Abstract checked",
+      "status": "Abstract checked",
+      "stage": "immune",
+      "aims": [
+        3,
+        4
+      ],
+      "nextAction": "Check primary figure, comparator, dose and endpoint mapping with Alex.",
+      "supportLevel": "Abstract inspected 2026-10-27; full-text verification pending",
+      "evidenceSummary": "At postnatal day 21, the abstract reports decreased total serum IgE in the B79, 2′-FL and combined groups."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "oral-tolerance",
+      "title": "Oral tolerance",
+      "detail": "No selected record directly establishes oral tolerance induction. Choose a specific mechanism and primary study before adding an evidence link."
+    },
+    {
+      "id": "host-benefit",
+      "title": "From microbial growth to host benefit",
+      "detail": "Culture utilization, metabolite changes and host endpoints come from different experiments. The complete causal chain has not been demonstrated by these records."
+    },
+    {
+      "id": "exposure",
+      "title": "Infant exposure and milk occurrence",
+      "detail": "Milk occurrence and exposure are organizing context. Add a separately sourced occurrence / exposure assertion before treating them as measured evidence."
+    },
+    {
+      "id": "registry",
+      "title": "Glycan identity reconciliation",
+      "detail": "GlyTouCan and WURCS are reused from the earlier project mapping; independent registry reconciliation remains pending."
+    }
+  ],
+  "stages": [
+    {
+      "id": "utilization",
+      "title": "Microbial utilization",
+      "question": "Can a particular strain use 2′-FL?"
+    },
+    {
+      "id": "metabolism",
+      "title": "Metabolism",
+      "question": "What does the culture produce?"
+    },
+    {
+      "id": "epithelial",
+      "title": "Epithelial responses",
+      "question": "What changes in the barrier model?"
+    },
+    {
+      "id": "immune",
+      "title": "Immune endpoints",
+      "question": "What was measured in which host?"
+    }
+  ]
+}

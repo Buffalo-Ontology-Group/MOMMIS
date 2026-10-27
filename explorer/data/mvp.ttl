@@ -1,0 +1,337 @@
+@prefix mvp: <https://w3id.org/mommis/mvp/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+mvp:3fl rdfs:label "3-Fucosyllactose" ;
+    mvp:glytoucan "G94468TS" ;
+    mvp:kind "Molecule" ;
+    mvp:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+    mvp:milkOligoId "2_0_1_0_0b" ;
+    mvp:wurcs "WURCS=2.0/3,3,2/[u2122h][a1221m-1a_1-5][a2112h-1b_1-5]/1-2-3/a3-b1_a4-c1" .
+
+mvp:E001 a mvp:EvidenceAssertion ;
+    rdf:object mvp:growth ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL> ;
+    mvp:comparator "Lactose and no-added-carbohydrate controls" ;
+    mvp:dose "Not transcribed; consult Methods before quantitative reuse." ;
+    mvp:duration "24-hour growth assay" ;
+    mvp:exposure "2′-FL in culture medium" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Culture growth is not evidence of infant clinical benefit or utilization by every B. infantis strain." ;
+    mvp:model "Anaerobic culture in modified Bifidobacterium medium 58 at 37 °C" ;
+    mvp:origin "PR #2 pilot record E001" ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1038/s41598-019-43780-9> ;
+    mvp:sourceLocation "Results: Growth of B. longum subsp. infantis Bi-26 on 2′-FL, and lactose; Figure 2A–B; Methods: Growth conditions" ;
+    mvp:stageKey "utilization" ;
+    mvp:statement "Bi-26 grew with 2′-FL in culture; growth was lower than with lactose and higher than the no-added-carbohydrate control." ;
+    mvp:strain "Bi-26 (ATCC SD-6720)" ;
+    mvp:system "In vitro" ;
+    mvp:title "Bi-26 grows with 2′-FL" .
+
+mvp:E002 a mvp:EvidenceAssertion ;
+    rdf:object mvp:metabolites ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Lactose fermentation" ;
+    mvp:dose "Not transcribed; consult Methods before quantitative reuse." ;
+    mvp:duration "Growth-phase sampling; timings not transcribed" ;
+    mvp:exposure "2′-FL in culture medium" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "This record does not establish an effect of those metabolites on host immune cells. It shares a study with E001 and is not independent replication." ;
+    mvp:model "Anaerobic bacterial culture; metabolite analysis" ;
+    mvp:origin "PR #2 pilot record E002" ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1038/s41598-019-43780-9> ;
+    mvp:sourceLocation "Discussion: metabolite-analysis findings; Figure 1 context" ;
+    mvp:stageKey "metabolism" ;
+    mvp:statement "During 2′-FL fermentation, Bi-26 produced acetate, lactate, formate and 1,2-propanediol." ;
+    mvp:strain "Bi-26 (ATCC SD-6720)" ;
+    mvp:system "In vitro" ;
+    mvp:title "Bi-26 fermentation yields metabolites" .
+
+mvp:E003 a mvp:EvidenceAssertion ;
+    rdf:object mvp:th17 ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:mixture ;
+    mvp:comparator "Same HMO mixture without B. infantis" ;
+    mvp:dose "5 mg/day of each HMO (15 mg/day total); 1 × 10^9 CFU per bacterial dosing day" ;
+    mvp:duration "14 days; bacterial gavage on days 1, 4 and 9" ;
+    mvp:exposure "B. infantis ATCC 15697 plus 2′-FL, LNT and 3′-SL" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "2′-FL was one of three HMOs. The comparison does not isolate a 2′-FL effect, establish a microbial mechanism, or show a clinical benefit in infants." ;
+    mvp:model "Germ-free mice; four intervention groups" ;
+    mvp:origin "PR #2 pilot record E003" ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1128/msystems.00392-26> ;
+    mvp:sourceLocation "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group." ;
+    mvp:strain "ATCC 15697" ;
+    mvp:system "Animal" ;
+    mvp:title "A combined intervention changes MLN Th17 proportions" .
+
+mvp:E004 a mvp:EvidenceAssertion ;
+    rdf:object mvp:uptake ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0098704> ;
+    mvp:comparator "Lactose condition; exact contrast needs checking" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Not transcribed" ;
+    mvp:exposure "2′-FL culture condition" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Transporter expression does not by itself demonstrate transport flux." ;
+    mvp:model "Bi-26 bacterial culture / transcriptomics" ;
+    mvp:origin "Immune actors!5" ;
+    mvp:reviewStatus "Mapping candidate" ;
+    mvp:source <https://doi.org/10.1038/s41598-019-43780-9> ;
+    mvp:sourceLocation "Primary passage not yet checked" ;
+    mvp:stageKey "utilization" ;
+    mvp:statement "The workbook links Bi-26 sugar-transport findings to uptake of 2′-FL. Direct transport evidence still needs review." ;
+    mvp:strain "Bi-26" ;
+    mvp:system "In vitro" ;
+    mvp:title "2′-FL uptake" .
+
+mvp:E005 a mvp:EvidenceAssertion ;
+    rdf:object mvp:catabolism ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0009313> ;
+    mvp:comparator "Confirm exact strain and substrate contrast" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Not transcribed" ;
+    mvp:exposure "Fucosyllactose conditions" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Do not generalize across strains or equate uptake with catabolism." ;
+    mvp:model "B. infantis strain comparison" ;
+    mvp:origin "Immune actors!7" ;
+    mvp:reviewStatus "Mapping candidate" ;
+    mvp:source <https://doi.org/10.1038/s41598-020-72792-z> ;
+    mvp:sourceLocation "Primary passage not yet checked" ;
+    mvp:stageKey "metabolism" ;
+    mvp:statement "The workbook identifies strain-specific fucosyllactose assimilation as a candidate 2′-FL catabolic process." ;
+    mvp:strain "Not transcribed" ;
+    mvp:system "In vitro" ;
+    mvp:title "2′-FL catabolism" .
+
+mvp:E006 a mvp:EvidenceAssertion ;
+    rdf:object mvp:barrier ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0060731> ;
+    mvp:comparator "Challenge control; confirm full design" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Not transcribed" ;
+    mvp:exposure "Isolated 2′-FL plus experimental barrier challenge" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "A cell-line finding does not demonstrate infant barrier improvement." ;
+    mvp:model "Human T84 epithelial cell model" ;
+    mvp:origin "Immune actors!9" ;
+    mvp:reviewStatus "Mapping candidate" ;
+    mvp:source <https://doi.org/10.1016/j.jff.2021.104630> ;
+    mvp:sourceLocation "Primary passage not yet checked" ;
+    mvp:stageKey "epithelial" ;
+    mvp:statement "The workbook reports protection of T84 epithelial layers against induced barrier disruption with isolated 2′-FL." ;
+    mvp:strain "Not transcribed" ;
+    mvp:system "In vitro" ;
+    mvp:title "Epithelial barrier response" .
+
+mvp:E007 a mvp:EvidenceAssertion ;
+    rdf:object mvp:adhesion ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_1905227> ;
+    mvp:comparator "Confirm adhesion-assay control" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Not transcribed" ;
+    mvp:exposure "2′-FL under pathogen challenge" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Do not combine in vitro adhesion and in vivo colonization into one quantitative effect." ;
+    mvp:model "Adhesion assay and mouse model mentioned in workbook" ;
+    mvp:origin "Immune actors!10" ;
+    mvp:reviewStatus "Mapping candidate" ;
+    mvp:source <https://pubmed.ncbi.nlm.nih.gov/32369957/> ;
+    mvp:sourceLocation "Primary passage not yet checked" ;
+    mvp:stageKey "epithelial" ;
+    mvp:statement "The workbook reports reduced E. coli O157 adhesion with 2′-FL; the adhesion assay must be separated from mouse colonization results." ;
+    mvp:strain "Not transcribed" ;
+    mvp:system "Mixed / verify" ;
+    mvp:title "Pathogen adhesion" .
+
+mvp:E008 a mvp:EvidenceAssertion ;
+    rdf:object mvp:cytokines ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0002718> ;
+    mvp:comparator "Formula containing GOS without added 2′-FL" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Not transcribed" ;
+    mvp:exposure "Formula containing GOS + 2′-FL" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "This is a formula comparison; cytokine concentration is not proof of oral tolerance or disease prevention." ;
+    mvp:model "Randomized formula study; biomarker substudy" ;
+    mvp:origin "Immune actors!11" ;
+    mvp:reviewStatus "Mapping candidate" ;
+    mvp:source <https://doi.org/10.3945/jn.116.236919> ;
+    mvp:sourceLocation "Primary passage not yet checked" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "The workbook reports lower plasma inflammatory cytokines in infants receiving GOS + 2′-FL formula than GOS-only formula." ;
+    mvp:strain "Not transcribed" ;
+    mvp:system "Human infant" ;
+    mvp:title "Infant inflammatory cytokines" .
+
+mvp:E009 a mvp:EvidenceAssertion ;
+    rdf:object mvp:siga ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction> ;
+    mvp:comparator "Not specified in abstract; verify full text" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Endpoint: postnatal day 21" ;
+    mvp:exposure "2′-FL arm; separate B79 and combined arms reported" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference." ;
+    mvp:model "Neonatal BALB/c mice" ;
+    mvp:origin "Immune actors!12" ;
+    mvp:reviewStatus "Abstract checked" ;
+    mvp:source <https://pubmed.ncbi.nlm.nih.gov/37641283/> ;
+    mvp:sourceLocation "Primary abstract" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "At postnatal day 21, the abstract reports increased sIgA in the 2′-FL group." ;
+    mvp:strain "B79 in bacterial intervention arms; not the isolated 2′-FL arm" ;
+    mvp:system "Animal" ;
+    mvp:title "Secretory IgA" .
+
+mvp:E010 a mvp:EvidenceAssertion ;
+    rdf:object mvp:il10 ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#CytokineProduction> ;
+    mvp:comparator "Not specified in abstract; verify full text" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Endpoint: postnatal day 21" ;
+    mvp:exposure "2′-FL arm; separate B79 and combined arms reported" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference." ;
+    mvp:model "Neonatal BALB/c mice" ;
+    mvp:origin "Immune actors!12" ;
+    mvp:reviewStatus "Abstract checked" ;
+    mvp:source <https://pubmed.ncbi.nlm.nih.gov/37641283/> ;
+    mvp:sourceLocation "Primary abstract" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "At postnatal day 21, the abstract reports increased IL-10 in the 2′-FL group." ;
+    mvp:strain "B79 in bacterial intervention arms; not the isolated 2′-FL arm" ;
+    mvp:system "Animal" ;
+    mvp:title "IL-10" .
+
+mvp:E011 a mvp:EvidenceAssertion ;
+    rdf:object mvp:muc2 ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not specified in abstract; verify full text" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Endpoint: postnatal day 21" ;
+    mvp:exposure "2′-FL arm; separate B79 and combined arms reported" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference." ;
+    mvp:model "Neonatal BALB/c mice" ;
+    mvp:origin "Immune actors!12" ;
+    mvp:reviewStatus "Abstract checked" ;
+    mvp:source <https://pubmed.ncbi.nlm.nih.gov/37641283/> ;
+    mvp:sourceLocation "Primary abstract" ;
+    mvp:stageKey "epithelial" ;
+    mvp:statement "At postnatal day 21, the abstract reports increased MUC2 expression in the B79, 2′-FL and combined groups." ;
+    mvp:strain "B79 in bacterial intervention arms; not the isolated 2′-FL arm" ;
+    mvp:system "Animal" ;
+    mvp:title "MUC2 expression" .
+
+mvp:E012 a mvp:EvidenceAssertion ;
+    rdf:object mvp:ige ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not specified in abstract; verify full text" ;
+    mvp:dose "Not transcribed" ;
+    mvp:duration "Endpoint: postnatal day 21" ;
+    mvp:exposure "2′-FL arm; separate B79 and combined arms reported" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Same study as E009–E012; not independent replication. A measured level is not necessarily production. No human clinical inference." ;
+    mvp:model "Neonatal BALB/c mice" ;
+    mvp:origin "Immune actors!12" ;
+    mvp:reviewStatus "Abstract checked" ;
+    mvp:source <https://pubmed.ncbi.nlm.nih.gov/37641283/> ;
+    mvp:sourceLocation "Primary abstract" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "At postnatal day 21, the abstract reports decreased total serum IgE in the B79, 2′-FL and combined groups." ;
+    mvp:strain "B79 in bacterial intervention arms; not the isolated 2′-FL arm" ;
+    mvp:system "Animal" ;
+    mvp:title "Total serum IgE" .
+
+mvp:hmo rdfs:label "Human milk oligosaccharides" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides> ;
+    mvp:kind "Molecular family" .
+
+mvp:infantis rdfs:label "B. longum subsp. infantis" ;
+    mvp:kind "Microbial partner" .
+
+mvp:milk rdfs:label "Maternal milk context" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/UBERON_0001913> ;
+    mvp:kind "Exposure context" .
+
+mvp:adhesion rdfs:label "Pathogen adhesion" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_1905227> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:barrier rdfs:label "Epithelial barrier response" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0060731> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:catabolism rdfs:label "Oligosaccharide catabolism" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0009313> ;
+    mvp:kind "Proposed process" .
+
+mvp:cytokines rdfs:label "Inflammatory cytokines" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0002718> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:growth rdfs:label "Culture growth" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:ige rdfs:label "Total serum IgE" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:il10 rdfs:label "IL-10 level" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#CytokineProduction> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:metabolites rdfs:label "Fermentation products" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:mixture rdfs:label "B. infantis + three-HMO mixture" ;
+    mvp:kind "Intervention" .
+
+mvp:muc2 rdfs:label "MUC2 expression" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:siga rdfs:label "Secretory IgA level" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:th17 rdfs:label "MLN Th17-cell proportion" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:uptake rdfs:label "Carbohydrate uptake" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0098704> ;
+    mvp:kind "Proposed process" .
+
+mvp:2fl rdfs:label "2′-Fucosyllactose" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/CHEBI_147155> ;
+    mvp:glytoucan "G49708ZB" ;
+    mvp:kind "Molecule" ;
+    mvp:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+    mvp:milkOligoId "2_0_1_0_0a" ;
+    mvp:wurcs "WURCS=2.0/3,3,2/[u2122h][a2112h-1b_1-5][a1221m-1a_1-5]/1-2-3/a4-b1_b2-c1" .
+

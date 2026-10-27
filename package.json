@@ -1,7 +1,12 @@
 {
   "name": "mommis-evidence-explorer",
   "private": true,
-  "version": "0.1.0",
+  "version": "2.0.0",
   "type": "module",
-  "scripts": {"test": "node --test tests/model.test.mjs", "build:rdf": "node scripts/export-rdf.mjs", "build:standalone":"node scripts/build-standalone.mjs"}
+  "scripts": {
+    "test": "node --test tests/model.test.mjs",
+    "build:rdf": "node scripts/export-rdf.mjs",
+    "build:standalone": "python3 scripts/build-mvp.py",
+    "test:browser": "node tests/mvp-browser.cjs"
+  }
 }
