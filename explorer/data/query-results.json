@@ -1,0 +1,270 @@
+[
+  {
+    "id": "01-glycan-utilization",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?glycan ?label ?glytoucan ?assertion ?status WHERE {\n ?glycan mvp:glytoucan ?glytoucan; rdfs:label ?label.\n ?assertion mvp:glycan ?glycan; mvp:stageKey \"utilization\"; mvp:reviewStatus ?status.\n} ORDER BY ?assertion\n",
+    "columns": [
+      "glycan",
+      "label",
+      "glytoucan",
+      "assertion",
+      "status"
+    ],
+    "rows": [
+      [
+        "https://w3id.org/mommis/mvp/2fl",
+        "2\u2032-Fucosyllactose",
+        "G49708ZB",
+        "https://w3id.org/mommis/mvp/E001",
+        "Draft extraction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/2fl",
+        "2\u2032-Fucosyllactose",
+        "G49708ZB",
+        "https://w3id.org/mommis/mvp/E004",
+        "Mapping candidate"
+      ]
+    ]
+  },
+  {
+    "id": "02-host-evidence",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?statement ?system ?exposure ?comparator ?status WHERE {\n ?assertion mvp:stageKey ?stage; mvp:statement ?statement; mvp:system ?system;\n mvp:exposure ?exposure; mvp:comparator ?comparator; mvp:reviewStatus ?status.\n FILTER (?stage IN (\"immune\", \"epithelial\"))\n} ORDER BY ?assertion\n",
+    "columns": [
+      "assertion",
+      "statement",
+      "system",
+      "exposure",
+      "comparator",
+      "status"
+    ],
+    "rows": [
+      [
+        "https://w3id.org/mommis/mvp/E003",
+        "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group.",
+        "Animal",
+        "B. infantis ATCC 15697 plus 2\u2032-FL, LNT and 3\u2032-SL",
+        "Same HMO mixture without B. infantis",
+        "Draft extraction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E006",
+        "The workbook reports protection of T84 epithelial layers against induced barrier disruption with isolated 2\u2032-FL.",
+        "In vitro",
+        "Isolated 2\u2032-FL plus experimental barrier challenge",
+        "Challenge control; confirm full design",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E007",
+        "The workbook reports reduced E. coli O157 adhesion with 2\u2032-FL; the adhesion assay must be separated from mouse colonization results.",
+        "Mixed / verify",
+        "2\u2032-FL under pathogen challenge",
+        "Confirm adhesion-assay control",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E008",
+        "The workbook reports lower plasma inflammatory cytokines in infants receiving GOS + 2\u2032-FL formula than GOS-only formula.",
+        "Human infant",
+        "Formula containing GOS + 2\u2032-FL",
+        "Formula containing GOS without added 2\u2032-FL",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E009",
+        "At postnatal day 21, the abstract reports increased sIgA in the 2\u2032-FL group.",
+        "Animal",
+        "2\u2032-FL arm; separate B79 and combined arms reported",
+        "Not specified in abstract; verify full text",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E010",
+        "At postnatal day 21, the abstract reports increased IL-10 in the 2\u2032-FL group.",
+        "Animal",
+        "2\u2032-FL arm; separate B79 and combined arms reported",
+        "Not specified in abstract; verify full text",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E011",
+        "At postnatal day 21, the abstract reports increased MUC2 expression in the B79, 2\u2032-FL and combined groups.",
+        "Animal",
+        "2\u2032-FL arm; separate B79 and combined arms reported",
+        "Not specified in abstract; verify full text",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E012",
+        "At postnatal day 21, the abstract reports decreased total serum IgE in the B79, 2\u2032-FL and combined groups.",
+        "Animal",
+        "2\u2032-FL arm; separate B79 and combined arms reported",
+        "Not specified in abstract; verify full text",
+        "Abstract checked"
+      ]
+    ]
+  },
+  {
+    "id": "03-evidence-provenance",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?source ?location ?origin ?status WHERE {\n ?assertion a mvp:EvidenceAssertion; mvp:source ?source; mvp:sourceLocation ?location;\n mvp:origin ?origin; mvp:reviewStatus ?status.\n} ORDER BY ?assertion\n",
+    "columns": [
+      "assertion",
+      "source",
+      "location",
+      "origin",
+      "status"
+    ],
+    "rows": [
+      [
+        "https://w3id.org/mommis/mvp/E001",
+        "https://doi.org/10.1038/s41598-019-43780-9",
+        "Results: Growth of B. longum subsp. infantis Bi-26 on 2\u2032-FL, and lactose; Figure 2A\u2013B; Methods: Growth conditions",
+        "PR #2 pilot record E001",
+        "Draft extraction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E002",
+        "https://doi.org/10.1038/s41598-019-43780-9",
+        "Discussion: metabolite-analysis findings; Figure 1 context",
+        "PR #2 pilot record E002",
+        "Draft extraction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E003",
+        "https://doi.org/10.1128/msystems.00392-26",
+        "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design",
+        "PR #2 pilot record E003",
+        "Draft extraction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E004",
+        "https://doi.org/10.1038/s41598-019-43780-9",
+        "Primary passage not yet checked",
+        "Immune actors!5",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E005",
+        "https://doi.org/10.1038/s41598-020-72792-z",
+        "Primary passage not yet checked",
+        "Immune actors!7",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E006",
+        "https://doi.org/10.1016/j.jff.2021.104630",
+        "Primary passage not yet checked",
+        "Immune actors!9",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E007",
+        "https://pubmed.ncbi.nlm.nih.gov/32369957/",
+        "Primary passage not yet checked",
+        "Immune actors!10",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E008",
+        "https://doi.org/10.3945/jn.116.236919",
+        "Primary passage not yet checked",
+        "Immune actors!11",
+        "Mapping candidate"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E009",
+        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
+        "Primary abstract",
+        "Immune actors!12",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E010",
+        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
+        "Primary abstract",
+        "Immune actors!12",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E011",
+        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
+        "Primary abstract",
+        "Immune actors!12",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/E012",
+        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
+        "Primary abstract",
+        "Immune actors!12",
+        "Abstract checked"
+      ]
+    ]
+  },
+  {
+    "id": "04-ontology-mappings",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?entity ?label ?candidateMapping WHERE {\n ?entity rdfs:label ?label; mvp:candidateMapping ?candidateMapping.\n} ORDER BY ?entity\n",
+    "columns": [
+      "entity",
+      "label",
+      "candidateMapping"
+    ],
+    "rows": [
+      [
+        "https://w3id.org/mommis/mvp/2fl",
+        "2\u2032-Fucosyllactose",
+        "http://purl.obolibrary.org/obo/CHEBI_147155"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/adhesion",
+        "Pathogen adhesion",
+        "http://purl.obolibrary.org/obo/GO_1905227"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/barrier",
+        "Epithelial barrier response",
+        "http://purl.obolibrary.org/obo/GO_0060731"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/catabolism",
+        "Oligosaccharide catabolism",
+        "http://purl.obolibrary.org/obo/GO_0009313"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/cytokines",
+        "Inflammatory cytokines",
+        "http://purl.obolibrary.org/obo/GO_0002718"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/growth",
+        "Culture growth",
+        "http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/hmo",
+        "Human milk oligosaccharides",
+        "http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/il10",
+        "IL-10 level",
+        "http://purl.obolibrary.org/obo/mommis#CytokineProduction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/milk",
+        "Maternal milk context",
+        "http://purl.obolibrary.org/obo/UBERON_0001913"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/siga",
+        "Secretory IgA level",
+        "http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/uptake",
+        "Carbohydrate uptake",
+        "http://purl.obolibrary.org/obo/GO_0098704"
+      ]
+    ]
+  }
+]

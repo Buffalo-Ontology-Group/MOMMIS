@@ -1,0 +1,150 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mommis: <http://purl.obolibrary.org/obo/mommis#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+mommis:ReviewLink001 mommis:predicateIRI obo:RO_0000057 ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:BCellActivation ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI obo:CL_0000236 ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink002 mommis:predicateIRI obo:RO_0000086 ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:BioactivePeptide ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI obo:OBI_0000070 ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink003 mommis:predicateIRI obo:RO_0000057 ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:CytokineProduction ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI obo:CL_0001064 ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink004 mommis:predicateIRI obo:RO_0000086 ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:HumanMilkOligosaccharides ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI obo:OBI_0000070 ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink005 mommis:predicateIRI mommis:affects ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:HumanMilkOligosaccharides ;
+    mommis:sourceNote "Unasserted legacy axiom annotation; placeholder citation excluded from evidence: PMID: 12345678" ;
+    mommis:targetIRI mommis:GutMicrobiotaBalance ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink006 mommis:predicateIRI mommis:participates_in ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI mommis:IntestinalEpithelialCells ;
+    mommis:sourceNote "Unasserted legacy axiom annotation; placeholder citation excluded from evidence: PMID: 23456789" ;
+    mommis:targetIRI mommis:InnateImmuneResponse ;
+    dct:source "legacy/mommis-2025.ttl" .
+
+mommis:ReviewLink007 mommis:predicateIRI <http://example.org/ontology#induces> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#BCellActivation> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#ImmunoglobulinAProduction> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink008 mommis:predicateIRI <http://example.org/ontology#affects> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#BioactivePeptide> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#GutAssociatedLymphoidTissue> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink009 mommis:predicateIRI <http://example.org/ontology#enables> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#BioactivePeptide> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#Phagocytosis> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink010 mommis:predicateIRI <http://example.org/ontology#regulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#BioactivePeptide> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#CytokineProduction> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink011 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#CytokineProduction> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#InnateImmuneResponse> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink012 mommis:predicateIRI <http://example.org/ontology#affects> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#GutAssociatedLymphoidTissue> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#InnateImmuneResponse> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink013 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#GutMicrobiotaBalance> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#BCellActivation> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink014 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#GutMicrobiotaBalance> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#TCellActivation> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink015 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#HumanMilkOligosaccharides> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#GutMicrobiotaBalance> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink016 mommis:predicateIRI <http://example.org/ontology#adjacentTo> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#MilkFatGlobuleMembrane> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#IntestinalEpithelialCells> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink017 mommis:predicateIRI <http://example.org/ontology#affects> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#MilkFatGlobuleMembrane> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#IntestinalEpithelialCells> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink018 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#Phagocytosis> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#InnateImmuneResponse> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:ReviewLink019 mommis:predicateIRI <http://example.org/ontology#positivelyRegulates> ;
+    mommis:reviewStatus "Unreviewed; NOT an accepted biological assertion" ;
+    mommis:sourceIRI <http://example.org/ontology#TCellActivation> ;
+    mommis:sourceNote "Original conceptual assertion; not validated evidence" ;
+    mommis:targetIRI <http://example.org/ontology#ImmuneHealth> ;
+    dct:source "legacy/mommis-high-level.rdf" .
+
+mommis:predicateIRI a owl:AnnotationProperty .
+
+mommis:reviewStatus a owl:AnnotationProperty .
+
+mommis:sourceIRI a owl:AnnotationProperty .
+
+mommis:sourceNote a owl:AnnotationProperty .
+
+mommis:targetIRI a owl:AnnotationProperty .
+
+dct:source a owl:AnnotationProperty .
+

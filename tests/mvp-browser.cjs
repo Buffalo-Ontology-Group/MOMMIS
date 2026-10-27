@@ -1,0 +1,15 @@
+const {chromium}=require('playwright');const assert=require('node:assert/strict');const path=require('node:path');
+(async()=>{const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1100}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('file://'+path.resolve('preview/mommis-mvp-v2.html'));
+await page.waitForSelector('#pathway .record');assert.equal(await page.locator('#pathway .record').count(),12);
+assert.match(await page.locator('#result-count').innerText(),/7 cited studies/);
+await page.screenshot({path:'/tmp/mommis-mvp-desktop.png',fullPage:true});
+await page.locator('#system').selectOption('Human infant');assert.equal(await page.locator('#pathway .record').count(),1);await page.locator('#pathway .record').click();assert.match(await page.locator('#detail').innerText(),/GOS/);await page.locator('#review-note').fill('Check comparator with Alex');await page.locator('#close-detail').click();await page.locator('#reset').click();
+await page.locator('#pathway [data-record="E003"]').click();assert.match(await page.locator('#detail').innerText(),/one of three HMOs/);await page.screenshot({path:'/tmp/mommis-mvp-detail.png'});await page.locator('#close-detail').click();
+await page.locator('[data-view="molecules"]').click();assert.match(await page.locator('#molecules').innerText(),/No evidence is transferred/);
+await page.locator('[data-view="questions"]').click();assert.equal(await page.locator('#questions details').count(),4);await page.locator('#questions summary').first().click();assert.ok(await page.locator('#questions tbody tr').count()>0);
+await page.locator('[data-view="ontology"]').click();assert.equal(await page.locator('#ontology-list details').count(),31);assert.match(await page.locator('#ontology-list').innerText(),/prebiotic disposition/);
+await page.locator('[data-view="curation"]').click();let event=page.waitForEvent('download');await page.locator('#download-benchmark').click();assert.equal((await event).suggestedFilename(),'mommis-benchmark-starter.csv');
+await page.locator('[data-view="map"]').click();await page.locator('#search').fill('nonexistentxxx');assert.equal(await page.locator('#pathway .record').count(),0);await page.locator('#reset').click();
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:'/tmp/mommis-mvp-mobile.png',fullPage:true});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+assert.deepEqual(errors,[]);await browser.close();console.log('PASS: 12 records, study filters, mixture context, note editing, identifiers, ontology, queries, CSV download, empty results and mobile overflow');})();

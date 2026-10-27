@@ -1,0 +1,6 @@
+PREFIX mvp: <https://w3id.org/mommis/mvp/>
+SELECT ?assertion ?statement ?system ?exposure ?comparator ?status WHERE {
+ ?assertion mvp:stageKey ?stage; mvp:statement ?statement; mvp:system ?system;
+ mvp:exposure ?exposure; mvp:comparator ?comparator; mvp:reviewStatus ?status.
+ FILTER (?stage IN ("immune", "epithelial"))
+} ORDER BY ?assertion

@@ -1,0 +1,6 @@
+PREFIX mvp: <https://w3id.org/mommis/mvp/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?glycan ?label ?glytoucan ?assertion ?status WHERE {
+ ?glycan mvp:glytoucan ?glytoucan; rdfs:label ?label.
+ ?assertion mvp:glycan ?glycan; mvp:stageKey "utilization"; mvp:reviewStatus ?status.
+} ORDER BY ?assertion

@@ -1,0 +1,472 @@
+{
+  "classes": [
+    {
+      "iri": "http://purl.obolibrary.org/obo/BFO_0000016",
+      "label": "disposition",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "label": "material entity",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/CHEBI_147155",
+      "label": "2'-fucosyllactose",
+      "local": false,
+      "parents": [
+        {
+          "iri": null,
+          "label": "has disposition some prebiotic disposition"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/CHEBI_16646",
+      "label": "carbohydrate",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/CHEBI_24431",
+      "label": "chemical entity",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/CHEBI_50699",
+      "label": "oligosaccharide",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/CL_0000000",
+      "label": "cell",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/GO_0008150",
+      "label": "biological process",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/GO_0008283",
+      "label": "cell population proliferation",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/GO_0008284",
+      "label": "positive regulation of cell population proliferation",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/GO_0042127",
+      "label": "regulation of cell population proliferation",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/UBERON_0000479",
+      "label": "tissue",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/UBERON_0001913",
+      "label": "milk",
+      "local": false,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#BacterialCellPopulationProliferation",
+      "label": "bacterial cell population proliferation",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0008283",
+          "label": "cell population proliferation"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#CytokineProduction",
+      "label": "cytokine production",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
+          "label": "biological process"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#GutAssociatedLymphoidTissue",
+      "label": "gut associated lymphoid tissue",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/UBERON_0000479",
+          "label": "tissue"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#GutMicrobiotaBalance",
+      "label": "gut microbiota balance",
+      "local": true,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [
+        "Upper category intentionally unresolved; no function/disposition axiom retained.",
+        "A proposed descriptor of gut microbial community composition or function. Operational definition and upper category unresolved."
+      ],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides",
+      "label": "human milk oligosaccharides",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/CHEBI_50699",
+          "label": "oligosaccharide"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [
+        "An oligosaccharide category associated with human milk. Occurrence-based versus structural membership, including synthetic material, remains to be defined."
+      ],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#ImmuneHealth",
+      "label": "immune health",
+      "local": true,
+      "parents": [],
+      "equivalentTo": [],
+      "comments": [
+        "Upper category intentionally unresolved; no function/disposition axiom retained.",
+        "A proposed immune-health concept. Quality, disposition, and outcome interpretations remain unresolved."
+      ],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction",
+      "label": "immunoglobulin a production",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
+          "label": "biological process"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#InnateImmuneResponse",
+      "label": "innate immune response",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0008150",
+          "label": "biological process"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#IntestinalEpithelialCells",
+      "label": "intestinal epithelial cells",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/CL_0000000",
+          "label": "cell"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [],
+      "reviewStatus": [
+        "Proposed alignment; Alex Diehl review pending"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#MilkAssociated2FL",
+      "label": "milk-associated 2'-fucosyllactose",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/CHEBI_147155",
+          "label": "2'-fucosyllactose"
+        },
+        {
+          "iri": "http://purl.obolibrary.org/obo/mommis#MilkCarbohydrate",
+          "label": "milk carbohydrate"
+        }
+      ],
+      "equivalentTo": [
+        "(2'-fucosyllactose AND milk carbohydrate)"
+      ],
+      "comments": [
+        "A 2'-fucosyllactose entity that is a milk carbohydrate. This contextual class is distinct from generic 2'-fucosyllactose, including synthesized material. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed."
+      ],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#MilkCarbohydrate",
+      "label": "milk carbohydrate",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent",
+          "label": "milk chemical component"
+        },
+        {
+          "iri": "http://purl.obolibrary.org/obo/CHEBI_16646",
+          "label": "carbohydrate"
+        }
+      ],
+      "equivalentTo": [
+        "(carbohydrate AND milk chemical component)"
+      ],
+      "comments": [
+        "A carbohydrate that is a milk chemical component. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed."
+      ],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#MilkChemicalComponent",
+      "label": "milk chemical component",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/CHEBI_24431",
+          "label": "chemical entity"
+        }
+      ],
+      "equivalentTo": [
+        "(chemical entity AND part of some milk)"
+      ],
+      "comments": [
+        "A chemical entity that is part of some milk. Proposed equivalence for Alex Diehl review; temporal scope of milk membership remains to be agreed."
+      ],
+      "reviewStatus": []
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL",
+      "label": "positive regulation of bacterial cell population proliferation by 2'-FL",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationByPrebioticMaterial",
+          "label": "positive regulation of bacterial cell population proliferation by prebiotic material"
+        }
+      ],
+      "equivalentTo": [
+        "(positive regulation of bacterial cell population proliferation AND realizes some (prebiotic disposition AND inheres in some 2'-fucosyllactose))"
+      ],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationByPrebioticMaterial",
+      "label": "positive regulation of bacterial cell population proliferation by prebiotic material",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationOfBacterialCellPopulationProliferation",
+          "label": "positive regulation of bacterial cell population proliferation"
+        }
+      ],
+      "equivalentTo": [
+        "(positive regulation of bacterial cell population proliferation AND realizes some prebiotic disposition)"
+      ],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#PositiveRegulationOfBacterialCellPopulationProliferation",
+      "label": "positive regulation of bacterial cell population proliferation",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0008284",
+          "label": "positive regulation of cell population proliferation"
+        },
+        {
+          "iri": "http://purl.obolibrary.org/obo/mommis#RegulationOfBacterialCellPopulationProliferation",
+          "label": "regulation of bacterial cell population proliferation"
+        },
+        {
+          "iri": null,
+          "label": "positively regulates some bacterial cell population proliferation"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#PrebioticDisposition",
+      "label": "prebiotic disposition",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/BFO_0000016",
+          "label": "disposition"
+        },
+        {
+          "iri": null,
+          "label": "inheres in some material entity"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [
+        "A disposition of a material entity to promote the proliferation of certain bacterial species. Disposition rather than role agreed by Emily and Alex, as confirmed by Emily on 2026-10-14. This working definition does not alone establish a clinical health benefit.",
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#PrebioticMaterial",
+      "label": "prebiotic material",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "label": "material entity"
+        }
+      ],
+      "equivalentTo": [
+        "(material entity AND has disposition some prebiotic disposition)"
+      ],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    },
+    {
+      "iri": "http://purl.obolibrary.org/obo/mommis#RegulationOfBacterialCellPopulationProliferation",
+      "label": "regulation of bacterial cell population proliferation",
+      "local": true,
+      "parents": [
+        {
+          "iri": "http://purl.obolibrary.org/obo/GO_0042127",
+          "label": "regulation of cell population proliferation"
+        },
+        {
+          "iri": null,
+          "label": "regulates some bacterial cell population proliferation"
+        }
+      ],
+      "equivalentTo": [],
+      "comments": [
+        "Source: user-supplied screenshot, Modeling decision: prebiotic materials and dispositions, 2026-10-14. Local extensions are proposals, not a claim that equivalent upstream terms are absent."
+      ],
+      "reviewStatus": [
+        "Disposition choice agreed; formalization from supplied slide, pending full import validation"
+      ]
+    }
+  ],
+  "version": [
+    "2.0.0-mvp"
+  ],
+  "sha256": "2a21a252a2973101ba216eb8792760c9763a888d96e111cda0b1070680b64ac7",
+  "importsFollowed": false,
+  "reasoning": "Asserted OWL structure only; no DL reasoning",
+  "generatedAt": "2026-10-27T16:49:02.336591+00:00",
+  "source": "Bundled OWL snapshot",
+  "status": "snapshot"
+}
