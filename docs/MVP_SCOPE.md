@@ -38,3 +38,5 @@ E003 is a mouse mixture intervention, not an isolated 2′-FL effect. E009–E01
 2. What single primary study and mechanism should establish the first oral-tolerance-specific assertion?
 3. Which minimal evidence and exposure classes should be formally reused (for example OBI/ECO/SEPIO) before adding local terms?
 4. Should the generic 2′-FL disposition restriction remain universal, or be constrained by material / experimental context?
+
+The evidence namespace `https://w3id.org/mommis/mvp/` is provisional and is not a claim of a registered/resolving persistent identifier.

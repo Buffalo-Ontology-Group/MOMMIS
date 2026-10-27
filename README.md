@@ -1,5 +1,7 @@
 # MOMMIS Evidence Explorer — MVP v2
 
+[Draft PR #3](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/3).
+
 This version narrows MOMMIS to an HMO-centered research prototype: 18 core interface entities, two molecular identifier entries, and 12 contextual evidence records. It follows Emily Steliotes's T15 proposal: a focused ontology, reuse of MilkOligoDB–GlyCosmos identifiers, a small evidence graph, four competency questions, and a starter for human-validated AI curation.
 
 ## Open the interface
