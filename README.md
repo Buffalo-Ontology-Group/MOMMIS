@@ -37,6 +37,6 @@ Build outputs: contextual RDF/Turtle, saved results from `queries/*.rq`, OWL sna
 
 ## Versions
 
-[PR #2](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/2) retains the full corpus. [PR #3](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/3) retains the first focused MVP. This is a separate v3 branch and draft PR; earlier versions are not modified, closed or merged.
+[PR #2](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/2) retains the full corpus. [PR #3](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/3) retains the first focused MVP. This is [v3 in draft PR #4](https://github.com/Buffalo-Ontology-Group/MOMMIS/pull/4); earlier versions are not modified, closed or merged.
 
 See [selection rationale](docs/MVP_SCOPE.md), [selection manifest](docs/mvp-selection.json) and [version policy](docs/VERSIONS.md).

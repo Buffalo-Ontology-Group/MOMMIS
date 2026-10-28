@@ -466,7 +466,7 @@
   "sha256": "2a21a252a2973101ba216eb8792760c9763a888d96e111cda0b1070680b64ac7",
   "importsFollowed": false,
   "reasoning": "Asserted OWL structure only; no DL reasoning",
-  "generatedAt": "2026-10-28T12:05:39.596873+00:00",
+  "generatedAt": "2026-10-28T12:10:14.904778+00:00",
   "source": "Bundled OWL snapshot",
   "status": "snapshot"
 }
