@@ -1,0 +1,159 @@
+# MOMMIS Ontology - Last updated: June 20th, 2025 2:11pm
+@prefix : <http://purl.obolibrary.org/obo/mommis#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix HEALTH: <http://purl.obolibrary.org/obo/HEALTH_> .
+@prefix CHEBI: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
+
+<http://purl.obolibrary.org/obo/mommis>
+    a owl:Ontology ;
+    owl:versionIRI <http://purl.obolibrary.org/obo/mommis/releases/2025-06-19/mommis.owl> ;
+    dc:title "MOMMIS Ontology" ;
+    dc:description "An ontology for modeling milk components and their effects on immune health, aligned with BFO and OBO Foundry principles." ;
+    dc:creator "Your Name" ;
+    dc:contributor "MOMMIS Project Team" ;
+    dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:references <https://github.com/yourusername/MOMMIS> ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo.owl> ;
+    owl:imports <http://purl.obolibrary.org/obo/ro.owl> ;
+    owl:imports <http://purl.obolibrary.org/obo/chebi.owl> ;
+    owl:imports <http://purl.obolibrary.org/obo/uberon.owl> ;
+    rdfs:comment "MOMMIS: Multi-Ontology framework of Maternal Milk for Immune Systems" ;
+    oboInOwl:hasOboNamespace "mommis" ;
+    oboInOwl:date "2025-06-19"^^xsd:date ;
+    .
+
+###########################################
+#   Object Properties (RO alignment)
+###########################################
+
+:affects a owl:ObjectProperty ;
+    rdfs:label "affects"@en ;
+    rdfs:subPropertyOf obo:RO_0002500 ;  # 'affects' from RO
+    rdfs:comment "A relation between a material entity or process and another entity that it influences or modifies."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/ro.owl> ;
+    .
+
+:has_part a owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    rdfs:subPropertyOf obo:BFO_0000051 ;  # 'has part' from BFO
+    rdfs:comment "A relation between a whole and its parts."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> ;
+    .
+
+:participates_in a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    rdfs:subPropertyOf obo:RO_0000056 ;  # 'participates in' from RO
+    rdfs:comment "A relation between a material entity and a process in which it participates."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/ro.owl> ;
+    .
+
+###########################################
+#   Classes
+###########################################
+
+### Process Classes (bfo:Process)
+:BCellActivation a owl:Class ;
+    rdfs:label "B cell activation"@en ;
+    rdfs:subClassOf bfo:Process ;
+    rdfs:comment "The process in which B cells are activated, leading to antibody production."@en ;
+    IAO:0000115 "The activation of B cells is a key step in the adaptive immune response, leading to antibody production and immunological memory."@en ;
+    obo:IAO_0000119 "NIAID Immunology Database and Analysis Portal" ;
+    obo:RO_0000057 obo:CL_0000236 ;  # B cell
+    .
+
+:CytokineProduction a owl:Class ;
+    rdfs:label "cytokine production"@en ;
+    rdfs:subClassOf bfo:Process ;
+    rdfs:comment "The biological process that results in the production of cytokines."@en ;
+    IAO:0000115 "Cytokines are signaling molecules that mediate and regulate immunity, inflammation, and hematopoiesis."@en ;
+    obo:RO_0000057 obo:CL_0001064 ;  # cytokine secreting cell
+    .
+
+### Material Entity Classes (bfo:MaterialEntity)
+:BioactivePeptide a owl:Class ;
+    rdfs:label "bioactive peptide"@en ;
+    rdfs:subClassOf bfo:MaterialEntity ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :has_part ;
+        owl:someValuesFrom CHEBI:16670  # peptide
+    ] ;
+    rdfs:comment "A peptide that has a biological effect on a living organism, tissue, or cell."@en ;
+    IAO:0000115 "Bioactive peptides are inactive within the sequence of the parent protein and can be released during digestion or processing."@en ;
+    obo:RO_0000086 obo:OBI_0000070 ;  # has role
+    .
+
+:HumanMilkOligosaccharides a owl:Class ;
+    rdfs:label "human milk oligosaccharides"@en ;
+    rdfs:subClassOf bfo:MaterialEntity ;
+    rdfs:subClassOf CHEBI:75771 ;  # oligosaccharide
+    rdfs:comment "Complex carbohydrates found in human milk that influence the gut microbiota and immune system."@en ;
+    IAO:0000115 "Human milk oligosaccharides (HMOs) are a significant component of human milk and act as prebiotics, immune modulators, and pathogen inhibitors."@en ;
+    obo:RO_0000086 obo:OBI_0000070 ;  # has role
+    .
+
+### Health-related Classes (using HEALTH prefix)
+HEALTH:ImmuneHealth a owl:Class ;
+    rdfs:label "immune health"@en ;
+    rdfs:subClassOf bfo:Disposition ;
+    rdfs:comment "The state of having a properly functioning immune system."@en ;
+    IAO:0000115 "Immune health refers to the balanced state of immune function that provides protection against pathogens while maintaining tolerance to self and harmless environmental antigens."@en ;
+    obo:IAO_0000119 "World Health Organization" ;
+    .
+
+### Example Axioms with Logical Definitions
+[ a owl:Axiom ;
+  owl:annotatedSource :HumanMilkOligosaccharides ;
+  owl:annotatedProperty :affects ;
+  owl:annotatedTarget :GutMicrobiotaBalance ;
+  rdfs:comment "Human milk oligosaccharides influence the balance of gut microbiota."@en ;
+  obo:IAO_0000119 "PMID: 12345678" ;  # Example PMID
+] .
+
+[ a owl:Axiom ;
+  owl:annotatedSource :IntestinalEpithelialCells ;
+  owl:annotatedProperty :participates_in ;
+  owl:annotatedTarget :InnateImmuneResponse ;
+  rdfs:comment "Intestinal epithelial cells play a role in the innate immune response."@en ;
+  obo:IAO_0000119 "PMID: 23456789" ;  # Example PMID
+] .
+
+###########################################
+#   Annotation Properties
+###########################################
+
+obo:IAO_0000119 a owl:AnnotationProperty ;
+    rdfs:label "source"@en ;
+    rdfs:comment "A source of information supporting the annotation."@en ;
+    .
+
+obo:RO_0000057 a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    rdfs:comment "A relation between a process and a continuant, in which the continuant is somehow involved in the process."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/ro.owl> ;
+    .
+
+###########################################
+#   Community and Versioning
+###########################################
+
+<http://purl.obolibrary.org/obo/mommis/requests>
+    a owl:Ontology ;
+    rdfs:label "MOMMIS Term Requests"@en ;
+    rdfs:comment "Use this IRI to request new terms or changes to existing terms in the mommis ontology."@en ;
+    .
+
+<http://purl.obolibrary.org/obo/mommis/issues>
+    a owl:Ontology ;
+    rdfs:label "MOMMIS Issue Tracker"@en ;
+    rdfs:comment "Use this IRI to report issues or bugs in the mommis ontology."@en ;
+    .

@@ -1,0 +1,7 @@
+PREFIX mvp: <https://w3id.org/mommis/mvp/>
+SELECT ?assertion ?document ?source ?location ?origin ?status WHERE {
+ ?assertion a mvp:EvidenceAssertion; mvp:source ?source; mvp:sourceLocation ?location;
+ mvp:origin ?origin; mvp:reviewStatus ?status.
+ OPTIONAL { ?assertion mvp:original_sources ?filename. }
+ BIND(COALESCE(?filename, STR(?source)) AS ?document)
+} ORDER BY ?assertion

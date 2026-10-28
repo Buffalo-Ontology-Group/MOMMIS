@@ -1,0 +1,356 @@
+@prefix mvp: <https://w3id.org/mommis/mvp/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mvp:C0724 a mvp:EvidenceAssertion ;
+    rdf:object mvp:2fl ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:milk ;
+    mvp:comparator "Not applicable to this occurrence statement" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "Milk from mothers described as having the Se locus" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Occurrence does not mean every milk sample contains 2′-FL. The excerpt is background, not a sampled occurrence dataset." ;
+    mvp:model "Milk occurrence description" ;
+    mvp:origin "PR #2 corpus edge 724" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "2′-FL is the most abundant oligosaccharide in milk from mothers with the Se locus (1) but is absent in cow’s milk" ;
+    mvp:original_from "2′-fucosyllactose" ;
+    mvp:original_id 724 ;
+    mvp:original_label "derived_from" ;
+    mvp:original_pages "2" ;
+    mvp:original_quality_score 9.57e-01 ;
+    mvp:original_sources "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf" ;
+    mvp:original_to "Human milk" ;
+    mvp:original_validation_status "accepted" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 2" ;
+    mvp:stageKey "occurrence" ;
+    mvp:statement "The imported excerpt describes 2′-FL occurrence in milk from secretor mothers." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Source context" ;
+    mvp:title "Milk occurrence in secretor context" .
+
+mvp:C1002 a mvp:EvidenceAssertion ;
+    rdf:object mvp:growth ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not stated in the selected excerpt" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "2′-FL with oxidative-stress conditions" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Confirm strain, concentration, stress assay and control in the cited source. This is not evidence of infant benefit." ;
+    mvp:model "Bacterial growth under oxidative stress" ;
+    mvp:origin "PR #2 corpus edge 1002" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "2′-FL was able to significantly improve the growth of B. infantis under oxidative stress" ;
+    mvp:original_from "2′-FL" ;
+    mvp:original_id 1002 ;
+    mvp:original_label "promotes_growth_of" ;
+    mvp:original_pages "13" ;
+    mvp:original_quality_score 9.57e-01 ;
+    mvp:original_sources "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf" ;
+    mvp:original_to "Bifidobacterium longum subsp. infantis" ;
+    mvp:original_validation_status "accepted" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 13" ;
+    mvp:stageKey "utilization" ;
+    mvp:statement "The imported excerpt reports improved B. infantis growth with 2′-FL under oxidative stress." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "In vitro / verify" ;
+    mvp:title "B. infantis growth under oxidative stress" .
+
+mvp:C1816 a mvp:EvidenceAssertion ;
+    rdf:object mvp:adhesion ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not stated in the selected excerpt" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "C. jejuni preincubated with 2′-FL" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "This is a review-derived excerpt. Confirm the primary assay; it does not show clinical protection." ;
+    mvp:model "Intestinal epithelial adhesion model; exact cell line not stated" ;
+    mvp:origin "PR #2 corpus edge 1816" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "adherence of C. jejuni to intestinal epithelial cells is prevented by prior incubation of C. jejuni with 2′-fucosyllactose" ;
+    mvp:original_from "2′-fucosyllactose" ;
+    mvp:original_id 1816 ;
+    mvp:original_label "inhibits" ;
+    mvp:original_pages "6-7" ;
+    mvp:original_quality_score 5.87e-01 ;
+    mvp:original_sources "K/Kirmiz et al. 2018 - Milk Glycans and Their Interaction with the Infant-Gut Microbiota.pdf" ;
+    mvp:original_to "Adherence of C. jejuni to intestinal epithelial cells" ;
+    mvp:original_validation_status "review" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 6-7" ;
+    mvp:stageKey "epithelial" ;
+    mvp:statement "The imported excerpt reports reduced epithelial adherence after prior incubation of C. jejuni with 2′-FL." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Cell model / verify" ;
+    mvp:title "C. jejuni epithelial adhesion" .
+
+mvp:C4121 a mvp:EvidenceAssertion ;
+    rdf:object mvp:nec ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not stated in the selected excerpt" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "2′-FL in distinct animal experiments" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Keep the negative piglet result visible. This review summary is not one experiment or evidence of efficacy in human infants." ;
+    mvp:model "Neonatal rat, mouse and piglet NEC models" ;
+    mvp:origin "PR #2 corpus edge 4121" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "2′-fucosyllactose had a moderate effect in the neonatal rat and mouse NEC models, but failed to improve NEC in a piglet model" ;
+    mvp:original_from "2′-fucosyllactose" ;
+    mvp:original_id 4121 ;
+    mvp:original_label "affects_outcome" ;
+    mvp:original_pages "5-6" ;
+    mvp:original_quality_score 9.5e-01 ;
+    mvp:original_sources "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf" ;
+    mvp:original_to "NEC" ;
+    mvp:original_validation_status "accepted" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 5-6" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "The imported excerpt reports an effect in neonatal rat and mouse NEC models, but no improvement in a piglet model." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Animal / review" ;
+    mvp:title "NEC results differ by animal model" .
+
+mvp:C5109 a mvp:EvidenceAssertion ;
+    rdf:object mvp:ige ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not stated in the selected excerpt" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Four weeks" ;
+    mvp:exposure "2′-FL supplementation for four weeks" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Host age, species, comparator and primary study must be recovered from the source. IgE reduction does not establish oral tolerance." ;
+    mvp:model "Host and allergy model not specified in this selected excerpt" ;
+    mvp:origin "PR #2 corpus edge 5109" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "supplementation with 2’-FL for 4 weeks decreased IgE and β-lactoglobulin-specific IgE in the serum" ;
+    mvp:original_from "2’-FL" ;
+    mvp:original_id 5109 ;
+    mvp:original_label "affects_outcome" ;
+    mvp:original_pages "14" ;
+    mvp:original_quality_score 5.57e-01 ;
+    mvp:original_sources "R/Rousseaux et al. 2021 - Human Milk Oligosaccharides - Their Effects on the Host and Their Potential as Therapeutic Agents.pdf" ;
+    mvp:original_to "IgE levels" ;
+    mvp:original_validation_status "review" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 14" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "The imported excerpt reports decreased total and β-lactoglobulin-specific serum IgE after four weeks of 2′-FL supplementation." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Not specified / review" ;
+    mvp:title "Serum IgE after supplementation" .
+
+mvp:C5321 a mvp:EvidenceAssertion ;
+    rdf:object mvp:cytokines ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Formula with only GOS added" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "2′-FL-associated formula group; full composition not stated in this excerpt" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Resolve the pronoun and intervention composition in the cited passage. Do not attribute a formula effect to isolated 2′-FL." ;
+    mvp:model "Formula comparison described in a review" ;
+    mvp:origin "PR #2 corpus edge 5321" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "They had 29%-83% lower concentrations of plasma inflammatory cytokines than infants fed the formula with only GOS added." ;
+    mvp:original_from "2’FL" ;
+    mvp:original_id 5321 ;
+    mvp:original_label "affects_outcome" ;
+    mvp:original_pages "14-15" ;
+    mvp:original_quality_score 5.57e-01 ;
+    mvp:original_sources "D/Dinleyici et al. - Functional effects of human milk oligosaccharides (HMOs).pdf" ;
+    mvp:original_to "Plasma inflammatory cytokines" ;
+    mvp:original_validation_status "review" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 14-15" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "The imported excerpt reports lower plasma inflammatory cytokines than in infants receiving formula with only GOS added." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Human infant / review" ;
+    mvp:title "Infant plasma cytokines" .
+
+mvp:C5653 a mvp:EvidenceAssertion ;
+    rdf:object mvp:glycocalyx ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Not stated in the selected excerpt" ;
+    mvp:dose "Not stated in the selected excerpt" ;
+    mvp:duration "Not stated in the selected excerpt" ;
+    mvp:exposure "2′-FL and 3-FL mentioned; separate versus combined treatment not resolved" ;
+    mvp:glycan mvp:2fl,
+        mvp:3fl ;
+    mvp:limitation "Retain both glycan mentions. Do not infer a combined intervention or transfer this endpoint to other 3-FL studies." ;
+    mvp:model "Epithelial cell lines; exact lines not stated" ;
+    mvp:origin "PR #2 corpus edge 5653" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:original_evidence "The results showed that two oligosaccharides in breast milk, 2′-FL and 3-FL, directly inﬂuence the development of epithelial cell lines by stimulating the development of the glycocalyx." ;
+    mvp:original_from "2′-FL" ;
+    mvp:original_id 5653 ;
+    mvp:original_label "promotes_growth_of" ;
+    mvp:original_pages "5-6" ;
+    mvp:original_quality_score 5.57e-01 ;
+    mvp:original_sources "C/Corona et al. 2021 - Human Milk Oligosaccharides - A Comprehensive Review towards Metabolomics.pdf" ;
+    mvp:original_to "Glycocalyx" ;
+    mvp:original_validation_status "review" ;
+    mvp:reviewStatus "Imported extraction — unverified" ;
+    mvp:source <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html> ;
+    mvp:sourceLocation "Imported page reference(s): 5-6" ;
+    mvp:stageKey "epithelial" ;
+    mvp:statement "The imported excerpt describes glycocalyx development in epithelial cell lines for 2′-FL and 3-FL." ;
+    mvp:strain "Not stated in the selected excerpt" ;
+    mvp:system "Cell model / review" ;
+    mvp:title "Epithelial glycocalyx response" .
+
+mvp:E001 a mvp:EvidenceAssertion ;
+    rdf:object mvp:growth ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL> ;
+    mvp:comparator "Lactose and no-added-carbohydrate controls" ;
+    mvp:dose "Not transcribed; consult Methods before quantitative reuse." ;
+    mvp:duration "24-hour growth assay" ;
+    mvp:exposure "2′-FL in culture medium" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "Culture growth is not evidence of infant clinical benefit or utilization by every B. infantis strain." ;
+    mvp:model "Anaerobic culture in modified Bifidobacterium medium 58 at 37 °C" ;
+    mvp:origin "PR #2 pilot record E001" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/data/pilot.json> ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1038/s41598-019-43780-9> ;
+    mvp:sourceLocation "Results: Growth of B. longum subsp. infantis Bi-26 on 2′-FL, and lactose; Figure 2A–B; Methods: Growth conditions" ;
+    mvp:stageKey "utilization" ;
+    mvp:statement "Bi-26 grew with 2′-FL in culture; growth was lower than with lactose and higher than the no-added-carbohydrate control." ;
+    mvp:strain "Bi-26 (ATCC SD-6720)" ;
+    mvp:system "In vitro" ;
+    mvp:title "Bi-26 grows with 2′-FL" .
+
+mvp:E002 a mvp:EvidenceAssertion ;
+    rdf:object mvp:metabolites ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:2fl ;
+    mvp:comparator "Lactose fermentation" ;
+    mvp:dose "Not transcribed; consult Methods before quantitative reuse." ;
+    mvp:duration "Growth-phase sampling; timings not transcribed" ;
+    mvp:exposure "2′-FL in culture medium" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "This record does not establish an effect of those metabolites on host immune cells. It shares a study with E001 and is not independent replication." ;
+    mvp:model "Anaerobic bacterial culture; metabolite analysis" ;
+    mvp:origin "PR #2 pilot record E002" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/data/pilot.json> ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1038/s41598-019-43780-9> ;
+    mvp:sourceLocation "Discussion: metabolite-analysis findings; Figure 1 context" ;
+    mvp:stageKey "metabolism" ;
+    mvp:statement "During 2′-FL fermentation, Bi-26 produced acetate, lactate, formate and 1,2-propanediol." ;
+    mvp:strain "Bi-26 (ATCC SD-6720)" ;
+    mvp:system "In vitro" ;
+    mvp:title "Bi-26 fermentation yields metabolites" .
+
+mvp:E003 a mvp:EvidenceAssertion ;
+    rdf:object mvp:th17 ;
+    rdf:predicate mvp:reportsEndpoint ;
+    rdf:subject mvp:mixture ;
+    mvp:comparator "Same HMO mixture without B. infantis" ;
+    mvp:dose "5 mg/day of each HMO (15 mg/day total); 1 × 10^9 CFU per bacterial dosing day" ;
+    mvp:duration "14 days; bacterial gavage on days 1, 4 and 9" ;
+    mvp:exposure "B. infantis ATCC 15697 plus 2′-FL, LNT and 3′-SL" ;
+    mvp:glycan mvp:2fl ;
+    mvp:limitation "2′-FL was one of three HMOs. The comparison does not isolate a 2′-FL effect, establish a microbial mechanism, or show a clinical benefit in infants." ;
+    mvp:model "Germ-free mice; four intervention groups" ;
+    mvp:origin "PR #2 pilot record E003" ;
+    mvp:originalCommit "55097946fe0c3e63f81f8854167e3f1f45382ac6" ;
+    mvp:originalExtraction <https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/data/pilot.json> ;
+    mvp:reviewStatus "Draft extraction" ;
+    mvp:source <https://doi.org/10.1128/msystems.00392-26> ;
+    mvp:sourceLocation "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design" ;
+    mvp:stageKey "immune" ;
+    mvp:statement "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group." ;
+    mvp:strain "ATCC 15697" ;
+    mvp:system "Animal" ;
+    mvp:title "A combined intervention changes MLN Th17 proportions" .
+
+mvp:hmo rdfs:label "Human milk oligosaccharides" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides> ;
+    mvp:kind "Molecular family" .
+
+mvp:infantis rdfs:label "B. longum subsp. infantis" ;
+    mvp:kind "Microbial partner" .
+
+mvp:3fl rdfs:label "3-Fucosyllactose" ;
+    mvp:glytoucan "G94468TS" ;
+    mvp:kind "Molecule" ;
+    mvp:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+    mvp:milkOligoId "2_0_1_0_0b" ;
+    mvp:wurcs "WURCS=2.0/3,3,2/[u2122h][a1221m-1a_1-5][a2112h-1b_1-5]/1-2-3/a3-b1_a4-c1" .
+
+mvp:adhesion rdfs:label "Pathogen adhesion" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_1905227> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:cytokines rdfs:label "Inflammatory cytokines" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/GO_0002718> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:glycocalyx rdfs:label "Epithelial glycocalyx" ;
+    mvp:kind "Reported endpoint" .
+
+mvp:ige rdfs:label "Serum IgE level" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:metabolites rdfs:label "Fermentation products" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:milk rdfs:label "Maternal milk context" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/UBERON_0001913> ;
+    mvp:kind "Exposure context" .
+
+mvp:mixture rdfs:label "B. infantis + three-HMO mixture" ;
+    mvp:kind "Intervention" .
+
+mvp:nec rdfs:label "NEC model outcomes" ;
+    mvp:kind "Reported endpoint" .
+
+mvp:th17 rdfs:label "MLN Th17-cell proportion" ;
+    mvp:kind "Measured endpoint" .
+
+mvp:growth rdfs:label "Culture growth" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/mommis#PositiveRegulationBy2FL> ;
+    mvp:kind "Measured endpoint" .
+
+mvp:2fl rdfs:label "2′-Fucosyllactose" ;
+    mvp:candidateMapping <http://purl.obolibrary.org/obo/CHEBI_147155> ;
+    mvp:glytoucan "G49708ZB" ;
+    mvp:kind "Molecule" ;
+    mvp:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+    mvp:milkOligoId "2_0_1_0_0a" ;
+    mvp:wurcs "WURCS=2.0/3,3,2/[u2122h][a2112h-1b_1-5][a1221m-1a_1-5]/1-2-3/a4-b1_b2-c1" .
+

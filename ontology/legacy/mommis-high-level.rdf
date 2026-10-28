@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ex="http://example.org/ontology#"
+     xmlns:go="http://purl.obolibrary.org/obo/go#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:core="http://purl.obolibrary.org/obo/uberon/core#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sssom="https://w3id.org/sssom/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <Ontology>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/go/releases/2025-03-16/extensions/go-plus.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2025-03-05/ro.owl"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#adjacentTo -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#adjacentTo"/>
+    
+
+
+    <!-- http://example.org/ontology#affects -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#affects"/>
+    
+
+
+    <!-- http://example.org/ontology#enables -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#enables"/>
+    
+
+
+    <!-- http://example.org/ontology#induces -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#induces"/>
+    
+
+
+    <!-- http://example.org/ontology#positivelyRegulates -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#positivelyRegulates"/>
+    
+
+
+    <!-- http://example.org/ontology#regulates -->
+
+    <ObjectProperty rdf:about="http://example.org/ontology#regulates"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#BCellActivation -->
+
+    <Class rdf:about="http://example.org/ontology#BCellActivation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#BioactivePeptide -->
+
+    <Class rdf:about="http://example.org/ontology#BioactivePeptide">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#CytokineProduction -->
+
+    <Class rdf:about="http://example.org/ontology#CytokineProduction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#GutAssociatedLymphoidTissue -->
+
+    <Class rdf:about="http://example.org/ontology#GutAssociatedLymphoidTissue">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#GutMicrobiotaBalance -->
+
+    <Class rdf:about="http://example.org/ontology#GutMicrobiotaBalance">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#HumanMilkOligosaccharides -->
+
+    <Class rdf:about="http://example.org/ontology#HumanMilkOligosaccharides">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#ImmuneHealth -->
+
+    <Class rdf:about="http://example.org/ontology#ImmuneHealth">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#ImmunoglobulinAProduction -->
+
+    <Class rdf:about="http://example.org/ontology#ImmunoglobulinAProduction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#InnateImmuneResponse -->
+
+    <Class rdf:about="http://example.org/ontology#InnateImmuneResponse">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#IntestinalEpithelialCells -->
+
+    <Class rdf:about="http://example.org/ontology#IntestinalEpithelialCells">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#MilkFatGlobuleMembrane -->
+
+    <Class rdf:about="http://example.org/ontology#MilkFatGlobuleMembrane">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#Phagocytosis -->
+
+    <Class rdf:about="http://example.org/ontology#Phagocytosis">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://example.org/ontology#TCellActivation -->
+
+    <Class rdf:about="http://example.org/ontology#TCellActivation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AdaptiveImmuneResponse -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#AdaptiveImmuneResponse">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:comment>Connects to Health Types Ontology</rdfs:comment>
+        <rdfs:isDefinedBy>A specialized response where the immune system learns to recognize and remember specific pathogens for faster responses upon re-exposure</rdfs:isDefinedBy>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontology#BCellActivation -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#BCellActivation">
+        <ex:induces rdf:resource="http://example.org/ontology#ImmunoglobulinAProduction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#BioactivePeptide -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#BioactivePeptide">
+        <ex:affects rdf:resource="http://example.org/ontology#GutAssociatedLymphoidTissue"/>
+        <ex:enables rdf:resource="http://example.org/ontology#Phagocytosis"/>
+        <ex:regulates rdf:resource="http://example.org/ontology#CytokineProduction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#CytokineProduction -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#CytokineProduction">
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#InnateImmuneResponse"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#GutAssociatedLymphoidTissue -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#GutAssociatedLymphoidTissue">
+        <ex:affects rdf:resource="http://example.org/ontology#InnateImmuneResponse"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#GutMicrobiotaBalance -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#GutMicrobiotaBalance">
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#BCellActivation"/>
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#TCellActivation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#HumanMilkOligosaccharides -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#HumanMilkOligosaccharides">
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#GutMicrobiotaBalance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#ImmuneHealth -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#ImmuneHealth"/>
+    
+
+
+    <!-- http://example.org/ontology#ImmunoglobulinAProduction -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#ImmunoglobulinAProduction"/>
+    
+
+
+    <!-- http://example.org/ontology#InnateImmuneResponse -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#InnateImmuneResponse"/>
+    
+
+
+    <!-- http://example.org/ontology#IntestinalEpithelialCells -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#IntestinalEpithelialCells"/>
+    
+
+
+    <!-- http://example.org/ontology#MilkFatGlobuleMembrane -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#MilkFatGlobuleMembrane">
+        <ex:adjacentTo rdf:resource="http://example.org/ontology#IntestinalEpithelialCells"/>
+        <ex:affects rdf:resource="http://example.org/ontology#IntestinalEpithelialCells"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#Phagocytosis -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#Phagocytosis">
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#InnateImmuneResponse"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontology#TCellActivation -->
+
+    <NamedIndividual rdf:about="http://example.org/ontology#TCellActivation">
+        <ex:positivelyRegulates rdf:resource="http://example.org/ontology#ImmuneHealth"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.org/ontology#BCellActivation">
+        <rdfs:isDefinedBy>A biological process where B cells become activated upon recognizing specific antigens, initiating antibody production</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#BioactivePeptide">
+        <rdfs:isDefinedBy>Short peptide sequences derived from proteins that exert a biological effect, often modulating immune or gut functions</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#CytokineProduction">
+        <rdfs:isDefinedBy>The process by which immune or epithelial cells synthesize and release cytokines, signaling molecules involved in immune regulation</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#GutAssociatedLymphoidTissue">
+        <rdfs:comment>Abbreviation: GALT</rdfs:comment>
+        <rdfs:isDefinedBy>Lymphoid tissue located in the gut (e.g., Peyer’s patches), essential for initiating immune responses to intestinal antigens</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#GutMicrobiotaBalance">
+        <rdfs:comment>Connects to Health Types Ontology AND to Fucosylated HMO Ontology</rdfs:comment>
+        <rdfs:isDefinedBy>A condition representing the compositional and functional equilibrium of microbial populations in the gastrointestinal tract</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#HumanMilkOligosaccharides">
+        <rdfs:comment>Should this specify 3-10 monosaccharides?</rdfs:comment>
+        <rdfs:isDefinedBy>Complex sugars found in human milk that are not digestible by infants but support beneficial gut microbiota and immune development</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#ImmuneHealth">
+        <rdfs:comment>Connects to Health Types Ontology</rdfs:comment>
+        <rdfs:isDefinedBy>The body&apos;s ability to defend against pathogens and maintain tolerance to self-antigens</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#ImmunoglobulinAProduction">
+        <rdfs:isDefinedBy>The biosynthesis of IgA antibodies, primarily occurring in mucosal tissues and important for immune defense in the gut</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#InnateImmuneResponse">
+        <rdfs:comment>Connects to Health Types Ontology</rdfs:comment>
+        <rdfs:isDefinedBy>The body&apos;s first line of defense, providing a rapid but generalized response to pathogens</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#IntestinalEpithelialCells">
+        <rdfs:isDefinedBy>Cells lining the intestine that form a barrier and participate in nutrient absorption and immune signaling</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#MilkFatGlobuleMembrane">
+        <rdfs:isDefinedBy>A triple-layer membrane structure that surrounds fat globules in milk, containing bioactive proteins and lipids</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#Phagocytosis">
+        <rdfs:isDefinedBy>The process by which certain immune cells (e.g., macrophages) engulf and digest pathogens and debris</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/ontology#TCellActivation">
+        <rdfs:isDefinedBy>The process of T cell engagement and stimulation through antigen recognition, leading to proliferation and immune activity</rdfs:isDefinedBy>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
