@@ -1,42 +1,50 @@
-# MVP v2 scope and rationale
+# MVP v3 scope and evidence selection
 
-## Sources reviewed
+Emily asked to use the original evidence explorer before searching elsewhere. This revision replaces all nine v2 additions with seven explicitly selected original corpus records. It retains the original three contextual pilot records, both molecular identifier mappings, the focused ontology and the interface structure. No new web or literature search was performed.
 
-- Attached T15 proposal, “Formalizing MOMMIS: An Ontology and Evidence-Aware Knowledge Graph for Human Milk Bioactives and Infant Immune Development,” including its five specific aims and October 20 notes. The document sets a pilot target of approximately 10–15 assertions and three to four competency questions. The proposal itself is not copied into this public repository.
-- Drive folder `1uZ7zykpvX_bW05yY7n17uyoJtef9Yv14`: listed all nine direct entries. Read the relevant parent-decision workbook and September 2026 modeling presentation. The literature subfolder contains a roughly 298 MB ZIP; it was inventoried, not unpacked or comprehensively reviewed. Unrelated planning documents/templates/publication lists were not used to select terms.
-- `milk_ontology_parent_decisions.xlsm`: Term parent decisions rows 5–24; Immune actors rows 5–12; 2FL example rows 5–12; Modeling rules rows 5–10; existing ontology term list and key-paper notes. Candidate mappings and secondary summaries are not independent validation.
-- PR #2's three contextual pilot records and two molecular mappings, preserved as selection sources. The large corpus was inspected to assess noise and ambiguity; no generic corpus edge was promoted to a verified mechanistic assertion.
-- Luo et al. 2023, PMID 37641283, primary abstract read 27 October 2026. Four distinct PND21 endpoints were represented with shared study identity and incomplete comparator/dose fields. They do not count as four studies. Other workbook-selected sources need primary-passage review.
+The selection contains **10 evidence records, 14 core interface entities and eight cited source documents**. Source documents include reviews and must not be counted as independent experiments. All records need expert validation. The underlying OWL is unchanged from v2: 18 local and 13 external named class declarations.
 
-## Inclusion rules
+## Source boundary
 
-An entity must anchor the selected glycan identities, experimental exposure, B. infantis partner, or a selected measured endpoint. An evidence record must have a traceable source and preserve its host, intervention and review status. Choose explicit records rather than automated degree ranking. Evidence count includes incomplete candidates; this is not completion of the proposal's 10–15 human-curated assertions target.
+All evidence comes from PR #2 at commit `55097946fe0c3e63f81f8854167e3f1f45382ac6`:
 
-| Aim | MVP implementation | Remaining work |
+- `explorer/data/pilot.json`: original E001–E003 and both identifier mappings.
+- `explorer/knowledge-graph/source/original.html`: original edge IDs 724, 1002, 1816, 5321, 4121, 5109 and 5653.
+
+`explorer/data/original-selection.json` stores exact copies of the selected source records and SHA-256 digests of both source files. The version's tests compare those copies against the pinned Git objects. `docs/mvp-selection.json` records selection reasons, omitted candidates and retired v2 IDs. No full corpus is loaded into the new interface.
+
+## Selected records
+
+| ID | Why retain it | Boundary to keep visible |
 |---|---|---|
-| 1: core OWL/RDF | Retained 18 local classes and existing disposition / proliferation model. Removed seven out-of-scope local classes. | Alex reviews definitions, temporal milk context, parentage and imported ontology closure. |
-| 2: glycan identifiers | Two existing GlyTouCan / WURCS mappings, 2′-FL and 3-FL. | Reconcile against registries; 3-FL remains identity-only. |
-| 3: evidence graph | 12 contextual records from seven cited studies, preserving mixtures and species. | Verify the five workbook candidates, four abstract extractions and three earlier drafts against full text and expert review. |
-| 4: competency questions | Four runnable SPARQL queries with saved results and RDF export. | Expand to class-level inference only after mappings and import closure are validated. |
-| 5: AI benchmark | Exportable curation worksheet with source, candidate interpretation and blank gold-label / reviewer fields. | Select exact snippets, adjudicate labels, choose a study-held-out split, then run and evaluate one extraction approach. |
+| E001 | Existing contextual Bi-26 growth extraction | Strain and culture context; no infant clinical inference |
+| E002 | Existing fermentation-product extraction | Same paper as E001; does not establish host effects |
+| E003 | Existing mouse immune-endpoint extraction | Three-HMO mixture plus microbe; not isolated 2′-FL |
+| C0724 | Milk occurrence in secretor context | Background occurrence statement, not a universal milk composition axiom |
+| C1002 | Reported B. infantis growth under oxidative stress | Exact strain, comparator and dose absent from selected excerpt |
+| C1816 | Epithelial pathogen adhesion | Source-derived review statement; primary assay unresolved |
+| C5321 | Human formula/cytokine connection | Resolve pronoun and full formula composition; retain GOS comparator |
+| C4121 | NEC model differences | Preserve reported non-improvement in piglets alongside rat/mouse findings |
+| C5109 | IgE endpoint relevant to the immune-development question | Selected excerpt omits species/age; do not infer oral tolerance |
+| C5653 | Epithelial glycocalyx endpoint | Both 2′-FL and 3-FL mentioned; combined versus separate treatment unresolved |
 
-## Deliberate exclusions
+The named sources in the corpus are PDF filenames. Links open the pinned original extraction, not those PDFs. No cited PDF was newly fetched or verified in this revision. Original `accepted` / `review` labels and numerical scores are preserved as imported metadata; the current status is always `Imported extraction — unverified` for corpus records.
 
-Removed the full corpus from the new active interface and branch: broad nutritional categories, analytical methods, numerical measurement nodes, unrelated adult outcomes and dense gene/enzyme detail. Peptides, MFGM and generic glycoprotein classes are deferred in line with the proposal. B-cell activation, T-cell activation, adaptive immune response and phagocytosis are removed from the active OWL because this shortlist does not need their local placeholders. Their reference definitions remain in PR #2 and source history.
+## Alignment with the proposal
 
-The active ontology retains 18 local classes and 13 external named class declarations. These 31 OWL classes are not the same count as the interface's 18 core entities. Historical source files are retained only as provenance; they are not loaded by the MVP.
+1. **Core ontology:** retain v2's focused OWL and Alex's prebiotic-disposition pattern. Avoid deriving new universal axioms from imported edges.
+2. **Molecular identity:** reuse the existing MilkOligoDB–GlyTouCan / WURCS mappings for 2′-FL and 3-FL. C5653 explicitly mentions 3-FL; no other 2′-FL finding is transferred to it.
+3. **Small evidence graph:** 10 traceable records, preserving context and uncertainty. This is a shortlist for curation, not completion of the human-validated assertion target.
+4. **Competency questions:** four executable SPARQL queries, with original provenance also preserved in RDF. The browser displays saved results, not a SPARQL engine.
+5. **AI benchmark:** worksheet includes original excerpts/statuses and empty human-adjudication fields. Source passages still need verification. Resolve primary-study overlap before evaluation splitting.
 
-## Modeling cautions carried forward
+The evidence namespace `https://w3id.org/mommis/mvp/` remains provisional, with no claim of registered/resolving identifiers.
 
-A milk component is not a subclass of milk. Material, disposition, process, measured endpoint and interpretation remain distinct. Prebiotic disposition is retained, following Alex's modeling decision. A concentration change is not automatically evidence of production; candidate links to IgA/cytokine-production classes are marked as interpretations. External GO candidates from the workbook remain annotations in the evidence model, not asserted equivalence axioms.
+## Review with Alex
 
-E003 is a mouse mixture intervention, not an isolated 2′-FL effect. E009–E012 share the Luo study; their abstract does not provide the detailed comparator or dose. E008's human formula comparison remains a candidate until the primary passage is checked. No complete 2′-FL → B. infantis → oral-tolerance causal chain is asserted.
+- Which existing source passage best distinguishes measured microbial growth from realization of the prebiotic disposition?
+- Which endpoints need an observation/quality representation rather than a production/process mapping?
+- Can the existing allergy/IgE sources support a specific oral-tolerance mechanism, or is this a documented literature gap?
+- Which source passages should be adjudicated first for a small gold-standard extraction benchmark?
 
-## Questions for Alex
-
-1. Which measured endpoint warrants mapping to a process class, and which should remain an observation / quality?
-2. What single primary study and mechanism should establish the first oral-tolerance-specific assertion?
-3. Which minimal evidence and exposure classes should be formally reused (for example OBI/ECO/SEPIO) before adding local terms?
-4. Should the generic 2′-FL disposition restriction remain universal, or be constrained by material / experimental context?
-
-The evidence namespace `https://w3id.org/mommis/mvp/` is provisional and is not a claim of a registered/resolving persistent identifier.
+Check these existing cited sources first. Add outside literature only to fill a specific remaining gap.

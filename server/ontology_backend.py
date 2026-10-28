@@ -49,7 +49,7 @@ def parse_ontology(raw):
       'generatedAt':datetime.now(timezone.utc).isoformat()}
 
 class OntologyStore:
-    def __init__(self,path,github=False,branch='feature/mommis-mvp-v2',interval=30,fetcher=None):
+    def __init__(self,path,github=False,branch='feature/mommis-mvp-v3',interval=30,fetcher=None):
         self.path=Path(path);self.github=github;self.interval=interval;self.next_check=0
         self.url='https://raw.githubusercontent.com/Buffalo-Ontology-Group/MOMMIS/'+quote(branch,safe='/')+'/ontology/mommis-aligned.owl'
         self.fetcher=fetcher or self.fetch_remote;self.lock=threading.Lock();self.value=None;self.raw=None
@@ -96,7 +96,7 @@ class Handler(SimpleHTTPRequestHandler):
     def list_directory(self,path):self.send_error(404);return None
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--github',action='store_true');p.add_argument('--branch',default='feature/mommis-mvp-v2');p.add_argument('--port',type=int,default=8000);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--github',action='store_true');p.add_argument('--branch',default='feature/mommis-mvp-v3');p.add_argument('--port',type=int,default=8000);a=p.parse_args()
     server=ThreadingHTTPServer(('127.0.0.1',a.port),partial(Handler,directory=str(ROOT)))
     server.ontology=OntologyStore(ROOT/'ontology/mommis-aligned.owl',github=a.github,branch=a.branch)
     print(f'MOMMIS: http://localhost:{a.port}/explorer/ (GitHub sync: {a.github})',flush=True)

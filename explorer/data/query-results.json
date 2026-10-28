@@ -14,15 +14,15 @@
         "https://w3id.org/mommis/mvp/2fl",
         "2\u2032-Fucosyllactose",
         "G49708ZB",
-        "https://w3id.org/mommis/mvp/E001",
-        "Draft extraction"
+        "https://w3id.org/mommis/mvp/C1002",
+        "Imported extraction \u2014 unverified"
       ],
       [
         "https://w3id.org/mommis/mvp/2fl",
         "2\u2032-Fucosyllactose",
         "G49708ZB",
-        "https://w3id.org/mommis/mvp/E004",
-        "Mapping candidate"
+        "https://w3id.org/mommis/mvp/E001",
+        "Draft extraction"
       ]
     ]
   },
@@ -39,76 +39,61 @@
     ],
     "rows": [
       [
+        "https://w3id.org/mommis/mvp/C1816",
+        "The imported excerpt reports reduced epithelial adherence after prior incubation of C. jejuni with 2\u2032-FL.",
+        "Cell model / verify",
+        "C. jejuni preincubated with 2\u2032-FL",
+        "Not stated in the selected excerpt",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C4121",
+        "The imported excerpt reports an effect in neonatal rat and mouse NEC models, but no improvement in a piglet model.",
+        "Animal / review",
+        "2\u2032-FL in distinct animal experiments",
+        "Not stated in the selected excerpt",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5109",
+        "The imported excerpt reports decreased total and \u03b2-lactoglobulin-specific serum IgE after four weeks of 2\u2032-FL supplementation.",
+        "Not specified / review",
+        "2\u2032-FL supplementation for four weeks",
+        "Not stated in the selected excerpt",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5321",
+        "The imported excerpt reports lower plasma inflammatory cytokines than in infants receiving formula with only GOS added.",
+        "Human infant / review",
+        "2\u2032-FL-associated formula group; full composition not stated in this excerpt",
+        "Formula with only GOS added",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5653",
+        "The imported excerpt describes glycocalyx development in epithelial cell lines for 2\u2032-FL and 3-FL.",
+        "Cell model / review",
+        "2\u2032-FL and 3-FL mentioned; separate versus combined treatment not resolved",
+        "Not stated in the selected excerpt",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
         "https://w3id.org/mommis/mvp/E003",
         "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group.",
         "Animal",
         "B. infantis ATCC 15697 plus 2\u2032-FL, LNT and 3\u2032-SL",
         "Same HMO mixture without B. infantis",
         "Draft extraction"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E006",
-        "The workbook reports protection of T84 epithelial layers against induced barrier disruption with isolated 2\u2032-FL.",
-        "In vitro",
-        "Isolated 2\u2032-FL plus experimental barrier challenge",
-        "Challenge control; confirm full design",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E007",
-        "The workbook reports reduced E. coli O157 adhesion with 2\u2032-FL; the adhesion assay must be separated from mouse colonization results.",
-        "Mixed / verify",
-        "2\u2032-FL under pathogen challenge",
-        "Confirm adhesion-assay control",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E008",
-        "The workbook reports lower plasma inflammatory cytokines in infants receiving GOS + 2\u2032-FL formula than GOS-only formula.",
-        "Human infant",
-        "Formula containing GOS + 2\u2032-FL",
-        "Formula containing GOS without added 2\u2032-FL",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E009",
-        "At postnatal day 21, the abstract reports increased sIgA in the 2\u2032-FL group.",
-        "Animal",
-        "2\u2032-FL arm; separate B79 and combined arms reported",
-        "Not specified in abstract; verify full text",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E010",
-        "At postnatal day 21, the abstract reports increased IL-10 in the 2\u2032-FL group.",
-        "Animal",
-        "2\u2032-FL arm; separate B79 and combined arms reported",
-        "Not specified in abstract; verify full text",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E011",
-        "At postnatal day 21, the abstract reports increased MUC2 expression in the B79, 2\u2032-FL and combined groups.",
-        "Animal",
-        "2\u2032-FL arm; separate B79 and combined arms reported",
-        "Not specified in abstract; verify full text",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E012",
-        "At postnatal day 21, the abstract reports decreased total serum IgE in the B79, 2\u2032-FL and combined groups.",
-        "Animal",
-        "2\u2032-FL arm; separate B79 and combined arms reported",
-        "Not specified in abstract; verify full text",
-        "Abstract checked"
       ]
     ]
   },
   {
     "id": "03-evidence-provenance",
-    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?source ?location ?origin ?status WHERE {\n ?assertion a mvp:EvidenceAssertion; mvp:source ?source; mvp:sourceLocation ?location;\n mvp:origin ?origin; mvp:reviewStatus ?status.\n} ORDER BY ?assertion\n",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?document ?source ?location ?origin ?status WHERE {\n ?assertion a mvp:EvidenceAssertion; mvp:source ?source; mvp:sourceLocation ?location;\n mvp:origin ?origin; mvp:reviewStatus ?status.\n OPTIONAL { ?assertion mvp:original_sources ?filename. }\n BIND(COALESCE(?filename, STR(?source)) AS ?document)\n} ORDER BY ?assertion\n",
     "columns": [
       "assertion",
+      "document",
       "source",
       "location",
       "origin",
@@ -116,7 +101,64 @@
     ],
     "rows": [
       [
+        "https://w3id.org/mommis/mvp/C0724",
+        "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 2",
+        "PR #2 corpus edge 724",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C1002",
+        "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 13",
+        "PR #2 corpus edge 1002",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C1816",
+        "K/Kirmiz et al. 2018 - Milk Glycans and Their Interaction with the Infant-Gut Microbiota.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 6-7",
+        "PR #2 corpus edge 1816",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C4121",
+        "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 5-6",
+        "PR #2 corpus edge 4121",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5109",
+        "R/Rousseaux et al. 2021 - Human Milk Oligosaccharides - Their Effects on the Host and Their Potential as Therapeutic Agents.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 14",
+        "PR #2 corpus edge 5109",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5321",
+        "D/Dinleyici et al. - Functional effects of human milk oligosaccharides (HMOs).pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 14-15",
+        "PR #2 corpus edge 5321",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/C5653",
+        "C/Corona et al. 2021 - Human Milk Oligosaccharides - A Comprehensive Review towards Metabolomics.pdf",
+        "https://github.com/Buffalo-Ontology-Group/MOMMIS/blob/55097946fe0c3e63f81f8854167e3f1f45382ac6/explorer/knowledge-graph/source/original.html",
+        "Imported page reference(s): 5-6",
+        "PR #2 corpus edge 5653",
+        "Imported extraction \u2014 unverified"
+      ],
+      [
         "https://w3id.org/mommis/mvp/E001",
+        "https://doi.org/10.1038/s41598-019-43780-9",
         "https://doi.org/10.1038/s41598-019-43780-9",
         "Results: Growth of B. longum subsp. infantis Bi-26 on 2\u2032-FL, and lactose; Figure 2A\u2013B; Methods: Growth conditions",
         "PR #2 pilot record E001",
@@ -125,6 +167,7 @@
       [
         "https://w3id.org/mommis/mvp/E002",
         "https://doi.org/10.1038/s41598-019-43780-9",
+        "https://doi.org/10.1038/s41598-019-43780-9",
         "Discussion: metabolite-analysis findings; Figure 1 context",
         "PR #2 pilot record E002",
         "Draft extraction"
@@ -132,72 +175,10 @@
       [
         "https://w3id.org/mommis/mvp/E003",
         "https://doi.org/10.1128/msystems.00392-26",
+        "https://doi.org/10.1128/msystems.00392-26",
         "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design",
         "PR #2 pilot record E003",
         "Draft extraction"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E004",
-        "https://doi.org/10.1038/s41598-019-43780-9",
-        "Primary passage not yet checked",
-        "Immune actors!5",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E005",
-        "https://doi.org/10.1038/s41598-020-72792-z",
-        "Primary passage not yet checked",
-        "Immune actors!7",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E006",
-        "https://doi.org/10.1016/j.jff.2021.104630",
-        "Primary passage not yet checked",
-        "Immune actors!9",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E007",
-        "https://pubmed.ncbi.nlm.nih.gov/32369957/",
-        "Primary passage not yet checked",
-        "Immune actors!10",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E008",
-        "https://doi.org/10.3945/jn.116.236919",
-        "Primary passage not yet checked",
-        "Immune actors!11",
-        "Mapping candidate"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E009",
-        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
-        "Primary abstract",
-        "Immune actors!12",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E010",
-        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
-        "Primary abstract",
-        "Immune actors!12",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E011",
-        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
-        "Primary abstract",
-        "Immune actors!12",
-        "Abstract checked"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/E012",
-        "https://pubmed.ncbi.nlm.nih.gov/37641283/",
-        "Primary abstract",
-        "Immune actors!12",
-        "Abstract checked"
       ]
     ]
   },
@@ -221,16 +202,6 @@
         "http://purl.obolibrary.org/obo/GO_1905227"
       ],
       [
-        "https://w3id.org/mommis/mvp/barrier",
-        "Epithelial barrier response",
-        "http://purl.obolibrary.org/obo/GO_0060731"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/catabolism",
-        "Oligosaccharide catabolism",
-        "http://purl.obolibrary.org/obo/GO_0009313"
-      ],
-      [
         "https://w3id.org/mommis/mvp/cytokines",
         "Inflammatory cytokines",
         "http://purl.obolibrary.org/obo/GO_0002718"
@@ -246,24 +217,9 @@
         "http://purl.obolibrary.org/obo/mommis#HumanMilkOligosaccharides"
       ],
       [
-        "https://w3id.org/mommis/mvp/il10",
-        "IL-10 level",
-        "http://purl.obolibrary.org/obo/mommis#CytokineProduction"
-      ],
-      [
         "https://w3id.org/mommis/mvp/milk",
         "Maternal milk context",
         "http://purl.obolibrary.org/obo/UBERON_0001913"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/siga",
-        "Secretory IgA level",
-        "http://purl.obolibrary.org/obo/mommis#ImmunoglobulinAProduction"
-      ],
-      [
-        "https://w3id.org/mommis/mvp/uptake",
-        "Carbohydrate uptake",
-        "http://purl.obolibrary.org/obo/GO_0098704"
       ]
     ]
   }

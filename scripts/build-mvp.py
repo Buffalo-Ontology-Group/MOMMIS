@@ -19,6 +19,14 @@ for r in data['records']:
   g.add((s,M[key],Literal(r[key])))
  for id in r['glycanIds']:g.add((s,M.glycan,M[id]))
  source=next(x for x in data['sources'] if x['id']==r['sourceId']);g.add((s,M.source,URIRef(source['url'])))
+ if r.get('originURL'):g.add((s,M.originalExtraction,URIRef(r['originURL'])))
+ if r.get('evidenceOriginCommit'):g.add((s,M.originalCommit,Literal(r['evidenceOriginCommit'])))
+ if r.get('originalAssertion'):
+  original=r['originalAssertion']
+  for key in ['id','from','label','to','evidence','validation_status','quality_score']:
+   g.add((s,M['original_'+key],Literal(original[key])))
+  for key in ['sources','pages']:
+   for value in original[key]:g.add((s,M['original_'+key],Literal(value)))
  if r.get('ontologyIRI'):g.add((s,M.candidateMapping,URIRef(r['ontologyIRI'])))
 # Reified evidence only: never assert a universal molecule -> health effect triple.
 g.serialize(D/'mvp.ttl',format='turtle')
@@ -33,5 +41,5 @@ html=(ROOT/'explorer/index.html').read_text().replace('<link rel="stylesheet" hr
 payload=dict(data=data,ontology=ontology,queries=answers,rdf=(D/'mvp.ttl').read_text(),owl=raw.decode())
 script='window.MOMMIS_BUNDLE='+json.dumps(payload,ensure_ascii=False).replace('<','\\u003c')+';\n'+(ROOT/'explorer/app.js').read_text()
 html=html.replace('<script src="app.js" defer></script>','<script>'+script.replace('</script','<\\/script')+'</script>')
-(ROOT/'preview/mommis-mvp-v2.html').write_text(html)
+(ROOT/'preview/mommis-mvp-v3.html').write_text(html)
 print('Built MVP RDF, four SPARQL result sets, OWL snapshot and offline preview')
