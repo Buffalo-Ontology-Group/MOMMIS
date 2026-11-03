@@ -1,0 +1,5 @@
+PREFIX mvp: <https://w3id.org/mommis/mvp/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?entity ?label ?candidateMapping WHERE {
+ ?entity rdfs:label ?label; mvp:candidateMapping ?candidateMapping.
+} ORDER BY ?entity

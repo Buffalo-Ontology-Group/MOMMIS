@@ -1,0 +1,12 @@
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
+const assert=require('node:assert/strict'),path=require('node:path');
+(async()=>{const b=await chromium.launch({headless:true,args:['--no-sandbox']});const p=await b.newPage({viewport:{width:1440,height:1000}});let errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('file://'+path.resolve(__dirname,'../preview/mommis-mvp-v4.html'));
+assert.match(await p.locator('#result-count').innerText(),/^8 of 18/);
+await p.locator('#collection').selectOption('b-infantis');assert.match(await p.locator('#result-count').innerText(),/^3 of 18/);
+await p.locator('#ledger [data-record="CL003"]').click();assert.match(await p.locator('#detail-content').innerText(),/0.094–0.614/);assert.match(await p.locator('#detail-content').innerText(),/Nonrandomized/);await p.locator('#close-detail').click();
+await p.locator('[data-topic="NEC"]').click();assert.match(await p.locator('#result-count').innerText(),/^5 of 18/);await p.locator('#endpoint-type').selectOption('Clinical outcome');assert.match(await p.locator('#result-count').innerText(),/^3 of 18/);
+await p.locator('#reset').click();assert.match(await p.locator('#result-count').innerText(),/^18 of 18/);await p.locator('#search').fill('2FL');assert(await p.locator('#ledger [data-record="CL007"]').count());
+await p.locator('#reset').click();await p.locator('#ledger [data-record="E001"]').click();assert.match(await p.locator('#detail-content').innerText(),/1% w\/v/);await p.locator('#close-detail').click();
+await p.locator('#collection').selectOption('Clinical shortlist');await p.locator('#search').fill('no_such_finding_123');assert.match(await p.locator('#result-count').innerText(),/^0 of 18/);await p.locator('#search').fill('');
+const download=p.waitForEvent('download');await p.locator('#download-json').click();const dl=await download;await dl.saveAs('/tmp/mommis-clinical-selection.json');assert.equal(require('/tmp/mommis-clinical-selection.json').records.length,8);
+await p.screenshot({path:'/tmp/mommis-v4-clinical.png',fullPage:true});await p.setViewportSize({width:390,height:844});assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(errors,[]);await b.close();console.log('PASS clinical filters, source inspector, 2FL search, dose preservation, empty state, export and mobile width');})();

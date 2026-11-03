@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "parentVersionPR": 3,
+  "evidenceSourcePR": 2,
+  "evidenceSourceCommit": "55097946fe0c3e63f81f8854167e3f1f45382ac6",
+  "selectedEntities": 14,
+  "selectedRecords": 10,
+  "sourceDocuments": 8,
+  "selection": "Three original contextual pilot records plus seven original corpus assertions; no outside search",
+  "retainedOriginalPilotIds": [
+    "E001",
+    "E002",
+    "E003"
+  ],
+  "selectedOriginalEdgeIds": [
+    724,
+    1002,
+    1816,
+    5321,
+    4121,
+    5109,
+    5653
+  ],
+  "removedV2Records": [
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012"
+  ],
+  "idPolicy": "E001–E003 retain their original identities. Corpus IDs are C + zero-padded original edge ID. E004–E012 from v2 are not repurposed.",
+  "exclusions": {
+    "316": "Reversed utilizes edge and vague evidence; excluded",
+    "663": "Excerpt describes assay setup without stating outcome; use C1002 for reported growth result",
+    "5108": "Broad symptom outcome; retain the more specific IgE endpoint C5109 without inferring host context",
+    "externalAdditions": "Workbook-only and newly searched additions from v2 removed; remain preserved in PR #3"
+  }
+}

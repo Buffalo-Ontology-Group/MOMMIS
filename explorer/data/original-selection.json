@@ -1,0 +1,212 @@
+{
+  "sourceCommit": "55097946fe0c3e63f81f8854167e3f1f45382ac6",
+  "sourceFiles": {
+    "explorer/data/pilot.json": "740c02696738eb590618af964bb596dc4f0a38cb784340a8ad3f5f2ab900597a",
+    "explorer/knowledge-graph/source/original.html": "a4470441e29954ca934664876df76957f5ceca8c0ab4570b9e78c365f49c014c"
+  },
+  "pilotRecords": [
+    {
+      "id": "E001",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "Bi-26 grows with 2′-FL",
+      "statement": "Bi-26 grew with 2′-FL in culture; growth was lower than with lactose and higher than the no-added-carbohydrate control.",
+      "system": "In vitro",
+      "exposureType": "Isolated glycan",
+      "exposure": "2′-FL in culture medium",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "Bi-26 (ATCC SD-6720)",
+      "model": "Anaerobic culture in modified Bifidobacterium medium 58 at 37 °C",
+      "comparator": "Lactose and no-added-carbohydrate controls",
+      "duration": "24-hour growth assay",
+      "dose": "Not transcribed; consult Methods before quantitative reuse.",
+      "endpoint": "Culture growth (A600 and area under growth curve)",
+      "sourceId": "zabel2019",
+      "sourceLocation": "Results: Growth of B. longum subsp. infantis Bi-26 on 2′-FL, and lactose; Figure 2A–B; Methods: Growth conditions",
+      "evidenceSummary": "Growth curves distinguish substrate conditions in the tested strain.",
+      "limitation": "Culture growth is not evidence of infant clinical benefit or utilization by every B. infantis strain.",
+      "stage": "Microbial utilization",
+      "status": "Draft extraction",
+      "nextAction": "Check extraction against Figure 2 and add substrate concentration."
+    },
+    {
+      "id": "E002",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "Bi-26 fermentation yields metabolites",
+      "statement": "During 2′-FL fermentation, Bi-26 produced acetate, lactate, formate and 1,2-propanediol.",
+      "system": "In vitro",
+      "exposureType": "Isolated glycan",
+      "exposure": "2′-FL in culture medium",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "Bi-26 (ATCC SD-6720)",
+      "model": "Anaerobic bacterial culture; metabolite analysis",
+      "comparator": "Lactose fermentation",
+      "duration": "Growth-phase sampling; timings not transcribed",
+      "dose": "Not transcribed; consult Methods before quantitative reuse.",
+      "endpoint": "Measured fermentation products",
+      "sourceId": "zabel2019",
+      "sourceLocation": "Discussion: metabolite-analysis findings; Figure 1 context",
+      "evidenceSummary": "The paper reports these products from metabolite analysis.",
+      "limitation": "This record does not establish an effect of those metabolites on host immune cells. It shares a study with E001 and is not independent replication.",
+      "stage": "Microbial metabolites",
+      "status": "Draft extraction",
+      "nextAction": "Link each product to its results figure and a reviewed chemical identifier."
+    },
+    {
+      "id": "E003",
+      "glycanIds": [
+        "2fl"
+      ],
+      "title": "A combined intervention changes MLN Th17 proportions",
+      "statement": "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group.",
+      "system": "Animal",
+      "exposureType": "Mixture + microbe",
+      "exposure": "B. infantis ATCC 15697 plus 2′-FL, LNT and 3′-SL",
+      "organism": "Bifidobacterium longum subsp. infantis",
+      "strain": "ATCC 15697",
+      "model": "Germ-free mice; four intervention groups",
+      "comparator": "Same HMO mixture without B. infantis",
+      "duration": "14 days; bacterial gavage on days 1, 4 and 9",
+      "dose": "5 mg/day of each HMO (15 mg/day total); 1 × 10^9 CFU per bacterial dosing day",
+      "endpoint": "MLN Th17 cells as a percentage of CD4+ T cells",
+      "sourceId": "mulakala2026",
+      "sourceLocation": "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design",
+      "evidenceSummary": "The result concerns a group comparison in a combined-intervention mouse experiment.",
+      "limitation": "2′-FL was one of three HMOs. The comparison does not isolate a 2′-FL effect, establish a microbial mechanism, or show a clinical benefit in infants.",
+      "stage": "Immune endpoint",
+      "status": "Draft extraction",
+      "nextAction": "Verify Figure 3 and statistical contrast with a domain reviewer; retain the mixture and comparator."
+    }
+  ],
+  "corpusAssertions": [
+    {
+      "from": "2′-fucosyllactose",
+      "to": "Human milk",
+      "label": "derived_from",
+      "evidence": "2′-FL is the most abundant oligosaccharide in milk from mothers with the Se locus (1) but is absent in cow’s milk",
+      "sources": [
+        "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf"
+      ],
+      "pages": [
+        "2"
+      ],
+      "quality_score": 0.957,
+      "validation_status": "accepted",
+      "subject_mapped": true,
+      "object_mapped": false,
+      "id": 724,
+      "arrows": "to"
+    },
+    {
+      "from": "2′-FL",
+      "to": "Bifidobacterium longum subsp. infantis",
+      "label": "promotes_growth_of",
+      "evidence": "2′-FL was able to significantly improve the growth of B. infantis under oxidative stress",
+      "sources": [
+        "S/Schalich et al. 2024 - A human milk oligosaccharide prevents intestinal inflammation in adulthood via modulating gut microbial metabolism.pdf"
+      ],
+      "pages": [
+        "13"
+      ],
+      "quality_score": 0.957,
+      "validation_status": "accepted",
+      "subject_mapped": false,
+      "object_mapped": false,
+      "id": 1002,
+      "arrows": "to"
+    },
+    {
+      "from": "2′-fucosyllactose",
+      "to": "Adherence of C. jejuni to intestinal epithelial cells",
+      "label": "inhibits",
+      "evidence": "adherence of C. jejuni to intestinal epithelial cells is prevented by prior incubation of C. jejuni with 2′-fucosyllactose",
+      "sources": [
+        "K/Kirmiz et al. 2018 - Milk Glycans and Their Interaction with the Infant-Gut Microbiota.pdf"
+      ],
+      "pages": [
+        "6-7"
+      ],
+      "quality_score": 0.587,
+      "validation_status": "review",
+      "subject_mapped": true,
+      "object_mapped": false,
+      "id": 1816,
+      "arrows": "to"
+    },
+    {
+      "from": "2’FL",
+      "to": "Plasma inflammatory cytokines",
+      "label": "affects_outcome",
+      "evidence": "They had 29%-83% lower concentrations of plasma inflammatory cytokines than infants fed the formula with only GOS added.",
+      "sources": [
+        "D/Dinleyici et al. - Functional effects of human milk oligosaccharides (HMOs).pdf"
+      ],
+      "pages": [
+        "14-15"
+      ],
+      "quality_score": 0.557,
+      "validation_status": "review",
+      "subject_mapped": false,
+      "object_mapped": false,
+      "id": 5321,
+      "arrows": "to"
+    },
+    {
+      "from": "2′-fucosyllactose",
+      "to": "NEC",
+      "label": "affects_outcome",
+      "evidence": "2′-fucosyllactose had a moderate effect in the neonatal rat and mouse NEC models, but failed to improve NEC in a piglet model",
+      "sources": [
+        "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf"
+      ],
+      "pages": [
+        "5-6"
+      ],
+      "quality_score": 0.95,
+      "validation_status": "accepted",
+      "subject_mapped": true,
+      "object_mapped": false,
+      "id": 4121,
+      "arrows": "to"
+    },
+    {
+      "from": "2’-FL",
+      "to": "IgE levels",
+      "label": "affects_outcome",
+      "evidence": "supplementation with 2’-FL for 4 weeks decreased IgE and β-lactoglobulin-specific IgE in the serum",
+      "sources": [
+        "R/Rousseaux et al. 2021 - Human Milk Oligosaccharides - Their Effects on the Host and Their Potential as Therapeutic Agents.pdf"
+      ],
+      "pages": [
+        "14"
+      ],
+      "quality_score": 0.557,
+      "validation_status": "review",
+      "subject_mapped": false,
+      "object_mapped": false,
+      "id": 5109,
+      "arrows": "to"
+    },
+    {
+      "from": "2′-FL",
+      "to": "Glycocalyx",
+      "label": "promotes_growth_of",
+      "evidence": "The results showed that two oligosaccharides in breast milk, 2′-FL and 3-FL, directly inﬂuence the development of epithelial cell lines by stimulating the development of the glycocalyx.",
+      "sources": [
+        "C/Corona et al. 2021 - Human Milk Oligosaccharides - A Comprehensive Review towards Metabolomics.pdf"
+      ],
+      "pages": [
+        "5-6"
+      ],
+      "quality_score": 0.557,
+      "validation_status": "review",
+      "subject_mapped": false,
+      "object_mapped": false,
+      "id": 5653,
+      "arrows": "to"
+    }
+  ]
+}

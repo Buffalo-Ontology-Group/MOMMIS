@@ -1,0 +1,80 @@
+@prefix pilot: <https://example.org/mommis/pilot/> .
+
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+
+# Prototype namespace only; study records, not an approved MOMMIS ontology.
+
+pilot:2fl a pilot:GlycanRecord ;
+  dct:title "2′-Fucosyllactose" ;
+  dct:identifier "G49708ZB" ;
+  pilot:wurcs "WURCS=2.0/3,3,2/[u2122h][a2112h-1b_1-5][a1221m-1a_1-5]/1-2-3/a4-b1_b2-c1" ;
+  pilot:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+  prov:wasDerivedFrom <https://docs.google.com/spreadsheets/d/1Bjs_UJ3X432zWDvTbLnC0ZzXrImsfqT-AqUIROy9XMo/edit#gid=1219533678&range=A682:W683> .
+
+pilot:3fl a pilot:GlycanRecord ;
+  dct:title "3-Fucosyllactose" ;
+  dct:identifier "G94468TS" ;
+  pilot:wurcs "WURCS=2.0/3,3,2/[u2122h][a1221m-1a_1-5][a2112h-1b_1-5]/1-2-3/a3-b1_a4-c1" ;
+  pilot:mappingStatus "Copied from project mapping; independent registry reconciliation pending." ;
+  prov:wasDerivedFrom <https://docs.google.com/spreadsheets/d/1Bjs_UJ3X432zWDvTbLnC0ZzXrImsfqT-AqUIROy9XMo/edit#gid=1219533678&range=A682:W683> .
+
+pilot:E001 a pilot:StudyAssertion ;
+  dct:identifier "E001" ;
+  dct:description "Bi-26 grew with 2′-FL in culture; growth was lower than with lactose and higher than the no-added-carbohydrate control." ;
+  pilot:system "In vitro" ;
+  pilot:exposureType "Isolated glycan" ;
+  pilot:exposure "2′-FL in culture medium" ;
+  pilot:organism "Bifidobacterium longum subsp. infantis" ;
+  pilot:strain "Bi-26 (ATCC SD-6720)" ;
+  pilot:model "Anaerobic culture in modified Bifidobacterium medium 58 at 37 °C" ;
+  pilot:dose "Not transcribed; consult Methods before quantitative reuse." ;
+  pilot:duration "24-hour growth assay" ;
+  pilot:comparator "Lactose and no-added-carbohydrate controls" ;
+  pilot:endpoint "Culture growth (A600 and area under growth curve)" ;
+  pilot:sourceLocation "Results: Growth of B. longum subsp. infantis Bi-26 on 2′-FL, and lactose; Figure 2A–B; Methods: Growth conditions" ;
+  pilot:limitation "Culture growth is not evidence of infant clinical benefit or utilization by every B. infantis strain." ;
+  pilot:status "Draft extraction" ;
+  pilot:mentionsGlycan pilot:2fl ;
+  prov:wasDerivedFrom <https://doi.org/10.1038/s41598-019-43780-9> .
+
+pilot:E002 a pilot:StudyAssertion ;
+  dct:identifier "E002" ;
+  dct:description "During 2′-FL fermentation, Bi-26 produced acetate, lactate, formate and 1,2-propanediol." ;
+  pilot:system "In vitro" ;
+  pilot:exposureType "Isolated glycan" ;
+  pilot:exposure "2′-FL in culture medium" ;
+  pilot:organism "Bifidobacterium longum subsp. infantis" ;
+  pilot:strain "Bi-26 (ATCC SD-6720)" ;
+  pilot:model "Anaerobic bacterial culture; metabolite analysis" ;
+  pilot:dose "Not transcribed; consult Methods before quantitative reuse." ;
+  pilot:duration "Growth-phase sampling; timings not transcribed" ;
+  pilot:comparator "Lactose fermentation" ;
+  pilot:endpoint "Measured fermentation products" ;
+  pilot:sourceLocation "Discussion: metabolite-analysis findings; Figure 1 context" ;
+  pilot:limitation "This record does not establish an effect of those metabolites on host immune cells. It shares a study with E001 and is not independent replication." ;
+  pilot:status "Draft extraction" ;
+  pilot:mentionsGlycan pilot:2fl ;
+  prov:wasDerivedFrom <https://doi.org/10.1038/s41598-019-43780-9> .
+
+pilot:E003 a pilot:StudyAssertion ;
+  dct:identifier "E003" ;
+  dct:description "In germ-free mice, the BI + HMO group had a higher mesenteric-lymph-node Th17-cell proportion than the HMO-only group." ;
+  pilot:system "Animal" ;
+  pilot:exposureType "Mixture + microbe" ;
+  pilot:exposure "B. infantis ATCC 15697 plus 2′-FL, LNT and 3′-SL" ;
+  pilot:organism "Bifidobacterium longum subsp. infantis" ;
+  pilot:strain "ATCC 15697" ;
+  pilot:model "Germ-free mice; four intervention groups" ;
+  pilot:dose "5 mg/day of each HMO (15 mg/day total); 1 × 10^9 CFU per bacterial dosing day" ;
+  pilot:duration "14 days; bacterial gavage on days 1, 4 and 9" ;
+  pilot:comparator "Same HMO mixture without B. infantis" ;
+  pilot:endpoint "MLN Th17 cells as a percentage of CD4+ T cells" ;
+  pilot:sourceLocation "PDF page 3: B. infantis shapes spleen and MLN immune cell composition; Figure 3; Figure 1 study design" ;
+  pilot:limitation "2′-FL was one of three HMOs. The comparison does not isolate a 2′-FL effect, establish a microbial mechanism, or show a clinical benefit in infants." ;
+  pilot:status "Draft extraction" ;
+  pilot:mentionsGlycan pilot:2fl ;
+  prov:wasDerivedFrom <https://doi.org/10.1128/msystems.00392-26> .
