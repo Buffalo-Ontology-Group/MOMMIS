@@ -13,17 +13,20 @@ class OriginalProvenance(unittest.TestCase):
   self.assertEqual(audit['corpusAssertions'],[lookup[e['id']] for e in audit['corpusAssertions']])
   self.assertEqual(d['glycans'],pilot['glycans']);ids=[]
   for r in d['records']:
+   if r['collection'] != 'Earlier MVP':
+    if r.get('originalAssertion'):self.assertEqual(r['originalAssertion'],lookup[r['originalAssertion']['id']])
+    continue
    self.assertEqual(r['evidenceOriginCommit'],PIN)
    if r.get('originalAssertion'):
     e=r['originalAssertion'];self.assertEqual(e,lookup[e['id']]);self.assertEqual(r['id'],'C'+str(e['id']).zfill(4));ids.append(e['id'])
     self.assertEqual(r['reviewStatus'],'Imported extraction — unverified')
    else:self.assertEqual(r['originalPilotRecord'],next(x for x in pilot['records'] if x['id']==r['id']))
   self.assertEqual(set(ids),{724,1002,1816,5321,4121,5109,5653})
-  self.assertEqual(len({r['id'] for r in d['records']}),10)
+  self.assertEqual(len({r['id'] for r in d['records']}),18)
  def test_provenance_survives_rdf_export(self):
   g=Graph().parse(D/'mvp.ttl');M=Namespace('https://w3id.org/mommis/mvp/');d=json.loads((D/'mvp.json').read_text())
   for r in d['records']:
-   self.assertEqual(str(g.value(M[r['id']],M.originalCommit)),PIN)
+   if r.get('evidenceOriginCommit'):self.assertEqual(str(g.value(M[r['id']],M.originalCommit)),PIN)
    if r.get('originalAssertion'):
     for key in ['evidence','validation_status','quality_score','from','to','label','id']:
      self.assertEqual(g.value(M[r['id']],M['original_'+key]),Literal(r['originalAssertion'][key]))

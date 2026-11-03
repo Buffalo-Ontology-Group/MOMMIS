@@ -28,13 +28,15 @@
   },
   {
     "id": "02-host-evidence",
-    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?statement ?system ?exposure ?comparator ?status WHERE {\n ?assertion mvp:stageKey ?stage; mvp:statement ?statement; mvp:system ?system;\n mvp:exposure ?exposure; mvp:comparator ?comparator; mvp:reviewStatus ?status.\n FILTER (?stage IN (\"immune\", \"epithelial\"))\n} ORDER BY ?assertion\n",
+    "query": "PREFIX mvp: <https://w3id.org/mommis/mvp/>\nSELECT ?assertion ?statement ?system ?exposure ?comparator ?studyDesign ?endpointType ?status WHERE {\n ?assertion mvp:stageKey ?stage; mvp:statement ?statement; mvp:system ?system;\n mvp:exposure ?exposure; mvp:comparator ?comparator; mvp:reviewStatus ?status; mvp:studyDesign ?studyDesign; mvp:endpointType ?endpointType.\n FILTER (?stage IN (\"immune\", \"epithelial\", \"clinical\"))\n} ORDER BY ?assertion\n",
     "columns": [
       "assertion",
       "statement",
       "system",
       "exposure",
       "comparator",
+      "studyDesign",
+      "endpointType",
       "status"
     ],
     "rows": [
@@ -44,6 +46,8 @@
         "Cell model / verify",
         "C. jejuni preincubated with 2\u2032-FL",
         "Not stated in the selected excerpt",
+        "See original record",
+        "Unreviewed / laboratory",
         "Imported extraction \u2014 unverified"
       ],
       [
@@ -52,6 +56,8 @@
         "Animal / review",
         "2\u2032-FL in distinct animal experiments",
         "Not stated in the selected excerpt",
+        "See original record",
+        "Unreviewed / laboratory",
         "Imported extraction \u2014 unverified"
       ],
       [
@@ -60,6 +66,8 @@
         "Not specified / review",
         "2\u2032-FL supplementation for four weeks",
         "Not stated in the selected excerpt",
+        "See original record",
+        "Unreviewed / laboratory",
         "Imported extraction \u2014 unverified"
       ],
       [
@@ -68,6 +76,8 @@
         "Human infant / review",
         "2\u2032-FL-associated formula group; full composition not stated in this excerpt",
         "Formula with only GOS added",
+        "See original record",
+        "Unreviewed / laboratory",
         "Imported extraction \u2014 unverified"
       ],
       [
@@ -76,7 +86,89 @@
         "Cell model / review",
         "2\u2032-FL and 3-FL mentioned; separate versus combined treatment not resolved",
         "Not stated in the selected excerpt",
+        "See original record",
+        "Unreviewed / laboratory",
         "Imported extraction \u2014 unverified"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL001",
+        "Weight gain was noninferior with HMO-containing extensively hydrolyzed formula. Both formulas controlled symptoms; this does not establish an additional allergy-treatment effect of HMOs.",
+        "Human infant",
+        "EHF containing 2\u2032-FL + LNnT, with lower protein content",
+        "EHF without HMOs; protein 2.47 vs 2.20 g/100 kcal in test formula",
+        "Randomized controlled trial",
+        "Clinical outcome",
+        "Full-text claim checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL002",
+        "Low milk LNFP III (<60 \u03bcM) was associated with higher odds of cow\u2019s milk allergy: OR 6.7 (95% CI 2.0\u201322).",
+        "Human infant",
+        "Naturally occurring LNFP III in maternal milk",
+        "Higher LNFP III milk concentrations",
+        "Observational cohort analysis",
+        "Clinical outcome",
+        "Full-text claim checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL003",
+        "NEC occurred in 2.7% of EVC001-exposed infants versus 11.0% of unexposed infants; adjusted RR 0.27 (95% CI 0.094\u20130.614).",
+        "Human infant",
+        "B. infantis EVC001 administration",
+        "Historical cohort without EVC001",
+        "Retrospective nonconcurrent cohorts",
+        "Clinical outcome",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL004",
+        "Bell stage \u22652 NEC occurred in 2.0% vs 4.4%; RR 0.46 (95% CI 0.23\u20130.93). Late-onset sepsis (primary outcome) and mortality did not differ significantly.",
+        "Human infant",
+        "Combination of B. infantis, B. lactis and S. thermophilus",
+        "Maltodextrin placebo",
+        "Randomized controlled trial",
+        "Clinical outcome",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL005",
+        "In supplemented breastfed infants, the study reported lower intestinal Th2/Th17 cytokine signals and induction of IFN\u03b2; these are immune markers, not allergy or NEC diagnoses.",
+        "Human infant",
+        "B. infantis EVC001 in breastfed infants",
+        "Infants without supplementation; full analysis population to verify",
+        "Infant supplementation study with mechanistic experiments",
+        "Immune biomarker",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL006",
+        "Milk DSLNT concentrations were lower in infants who developed Bell stage 2/3 NEC than in matched controls.",
+        "Human infant",
+        "Naturally occurring milk DSLNT",
+        "Matched infants without NEC",
+        "Prospective multicenter cohort",
+        "Clinical outcome",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL007",
+        "In neonatal mice, 2\u2032-FL reduced experimental NEC severity and inflammatory markers; loss of protection with eNOS inhibition/deficiency supports a perfusion-related mechanism.",
+        "Animal model",
+        "2\u2032-FL in experimental NEC",
+        "Experimental NEC without 2\u2032-FL and mechanistic controls",
+        "Controlled animal experiment",
+        "Animal disease model",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL008",
+        "NEC occurred in 8/16 2\u2032-FL-fed pigs and 12/17 controls; no significant reduction in NEC or lesion severity was reported.",
+        "Animal model",
+        "Formula with 2\u2032-FL",
+        "Formula without added 2\u2032-FL",
+        "Controlled animal experiment",
+        "Animal disease model",
+        "Abstract checked"
       ],
       [
         "https://w3id.org/mommis/mvp/E003",
@@ -84,6 +176,8 @@
         "Animal",
         "B. infantis ATCC 15697 plus 2\u2032-FL, LNT and 3\u2032-SL",
         "Same HMO mixture without B. infantis",
+        "See original record",
+        "Unreviewed / laboratory",
         "Draft extraction"
       ]
     ]
@@ -157,10 +251,82 @@
         "Imported extraction \u2014 unverified"
       ],
       [
+        "https://w3id.org/mommis/mvp/CL001",
+        "https://doi.org/10.3390/nu14030530",
+        "https://doi.org/10.3390/nu14030530",
+        "Methods 2.1\u20132.4; Results; Discussion limitations; funding declaration",
+        "Targeted external primary-study search after PR #2 gap review",
+        "Full-text claim checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL002",
+        "R/Rousseaux et al. 2021 - Human Milk Oligosaccharides - Their Effects on the Host and Their Potential as Therapeutic Agents.pdf",
+        "https://doi.org/10.1016/j.jaci.2016.08.031",
+        "Main text: cohort, Figure 1 and multiple-comparison-adjusted analysis",
+        "PR #2 edge 2104; primary source checked separately",
+        "Full-text claim checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL003",
+        "T/Tobias et al. 2022 - Bifidobacteriumlongum subsp. infantis EVC001 Admini ... cidence of Necrotizing Enterocolitis in Very Low Birth Weight Infants.pdf",
+        "https://doi.org/10.1016/j.jpeds.2021.12.070",
+        "Primary abstract Results and Figure 1 study design",
+        "PR #2 edge 2485; primary source checked separately",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL004",
+        "https://pubmed.ncbi.nlm.nih.gov/24249817/",
+        "https://pubmed.ncbi.nlm.nih.gov/24249817/",
+        "Primary abstract Methods and Results",
+        "Targeted external primary-study search after PR #2 gap review",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL005",
+        "https://doi.org/10.1016/j.cell.2021.05.030",
+        "https://doi.org/10.1016/j.cell.2021.05.030",
+        "Primary abstract and conflict-of-interest declaration",
+        "Henrick filename present in PR #2; suspect imported attribution, so claim re-extracted from primary abstract",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL006",
+        "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf",
+        "https://doi.org/10.1136/gutjnl-2016-312819",
+        "Primary abstract Design and Results",
+        "PR #2 edge 49; primary source checked separately",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL006",
+        "C/Carr et al. 2021 - Role of Human Milk Bioactives on Infants' Gut and Immune Health.pdf",
+        "https://doi.org/10.1136/gutjnl-2016-312819",
+        "Primary abstract Design and Results",
+        "PR #2 edge 49; primary source checked separately",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL007",
+        "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/27609061/",
+        "Primary abstract and figure descriptions",
+        "PR #2 edge 4121; primary source checked separately",
+        "Abstract checked"
+      ],
+      [
+        "https://w3id.org/mommis/mvp/CL008",
+        "B/Bode 2018 - Human Milk Oligosaccharides in the Prevention of Necrotizing ... rney From in vitro and in vivo Models to Mother-Infant Cohort Studies.pdf",
+        "https://doi.org/10.1017/S0007114516002646",
+        "Primary publisher abstract",
+        "PR #2 edge 4121; primary source checked separately",
+        "Abstract checked"
+      ],
+      [
         "https://w3id.org/mommis/mvp/E001",
         "https://doi.org/10.1038/s41598-019-43780-9",
         "https://doi.org/10.1038/s41598-019-43780-9",
-        "Results: Growth of B. longum subsp. infantis Bi-26 on 2\u2032-FL, and lactose; Figure 2A\u2013B; Methods: Growth conditions",
+        "Results and Figure 2A\u2013B; Methods: Growth curves (1% w/v substrate in 5 mL mBM58).",
         "PR #2 pilot record E001",
         "Draft extraction"
       ],

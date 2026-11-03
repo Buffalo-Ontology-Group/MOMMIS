@@ -1,3 +1,7 @@
+## Clinical outcomes version (v4)
+
+Open `preview/mommis-mvp-v4.html` in a browser for the new eight-study shortlist. Filter NEC, cow’s milk allergy, immune markers, or B. infantis → outcomes; open records for evidence limits. [Review scope and next steps](docs/CLINICAL_EVIDENCE.md). Earlier previews below are preserved snapshots. Rebuild the current v4 preview with `scripts/build-mvp.py`.
+
 # MOMMIS Evidence Explorer — MVP v3
 
 This version follows the original-evidence-first workflow: **10 selected records from PR #2, 14 core interface entities and two molecular identities**. It replaces the nine v2 additions with seven original corpus records, keeping the original three contextual pilot extractions. No new literature search was used.

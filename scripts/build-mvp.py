@@ -15,7 +15,7 @@ for n in data['glycans']:
 for r in data['records']:
  s=M[r['id']];g.add((s,RDF.type,M.EvidenceAssertion))
  g.add((s,RDF.subject,M[r['subject']]));g.add((s,RDF.predicate,M.reportsEndpoint));g.add((s,RDF.object,M[r['target']]))
- for key in ['title','statement','system','model','strain','exposure','comparator','dose','duration','reviewStatus','sourceLocation','origin','limitation','stageKey']:
+ for key in ['title','statement','system','model','strain','exposure','comparator','dose','duration','reviewStatus','sourceLocation','origin','limitation','stageKey','studyDesign','endpointType','topic','resultDirection','checkedOn']:
   g.add((s,M[key],Literal(r[key])))
  for id in r['glycanIds']:g.add((s,M.glycan,M[id]))
  source=next(x for x in data['sources'] if x['id']==r['sourceId']);g.add((s,M.source,URIRef(source['url'])))
@@ -41,5 +41,5 @@ html=(ROOT/'explorer/index.html').read_text().replace('<link rel="stylesheet" hr
 payload=dict(data=data,ontology=ontology,queries=answers,rdf=(D/'mvp.ttl').read_text(),owl=raw.decode())
 script='window.MOMMIS_BUNDLE='+json.dumps(payload,ensure_ascii=False).replace('<','\\u003c')+';\n'+(ROOT/'explorer/app.js').read_text()
 html=html.replace('<script src="app.js" defer></script>','<script>'+script.replace('</script','<\\/script')+'</script>')
-(ROOT/'preview/mommis-mvp-v3.html').write_text(html)
+(ROOT/'preview/mommis-mvp-v4.html').write_text(html)
 print('Built MVP RDF, four SPARQL result sets, OWL snapshot and offline preview')
